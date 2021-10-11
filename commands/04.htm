@@ -1,0 +1,267 @@
+<html>
+<head>
+<title>Решение проблем</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Решение проблем</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>&nbsp;</p>
+        <p><strong>Шрифты</strong></p>
+        <p><a href="#lb1">Использовать кодовую страницу 1251 вместо 1252</a></p>
+        <p><a href="#lb2">Переключение на русскую раскладку в DOS-приложениях *</a></p>
+        <p>&nbsp;</p>
+        <p><strong>Зависшие приложения</strong></p>
+        <p><a href="#lb3">Интервал, по истечении которого не отвечающее приложение
+        считается зависшим</a></p>
+		<p><a href="#lb4">Завершать зависшее приложение</a></p>
+		<p><a href="#lb5">Завершать зависший сервис</a></p>
+		<p><a href="#lb6">Автоматически завершать зависшие приложения</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Проверка файлов</strong></p>
+		<p><a href="#lb7">Проверка файлов</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Путь к папке временных файлов</strong></p>
+		<p><a href="#lb9">Путь к папке временных файлов</a></p>
+		<p>&nbsp;</p>
+		<p><strong>AVI файлы</strong></p>
+		<p><a href="#cbShmedia">Корректное удаление avi файлов</a></p>
+		</blockquote></td>
+    </tr>
+</table>
+
+<h2>Шрифты</h2>
+
+<a name="lb1"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать кодовую страницу 1251 вместо 1252</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данная опция решает проблемы с отображением русских шрифтов в некоторых
+          программах. XP Tweaker меняет два параметра &quot;1250&quot; и &quot;1252&quot;.
+          В некоторых редких случаях можно исправить другие параметры. </p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Nls\CodePage</p>
+        <p><strong>STRING</strong> <span class="myb">1250</span>, значение &quot;c_1251.nls&quot; -
+          опция включена, &quot;c_1250.nls&quot; - выключена<br>
+      <strong>STRING</strong> <span class="myb">1252</span>, значение &quot;c_1251.nls&quot; -
+      опция включена, &quot;c_1252.nls&quot; - выключена</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb2"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Переключение на русскую раскладку в DOS-приложениях *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>В некоторых DOS-программах невозможно переключить раскладку на русский
+          язык, данная опция поможет вам решить эту проблему. Переключение на
+          русскую раскладку происходит по нажатию Ctrl+Right Shift, на английскую
+          - Ctrl+Left Shift. Чтобы изменения вступили в силу необходимо перезагрузиться.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Keyboard
+          Layout\DosKeybCodes</p>
+        <p><strong>STRING</strong> <span class="myb">00000409</span>, &quot;ru&quot; -
+          опция включена, &quot;us&quot; - выключена</p>
+        <p>Если опция включена, то XP Tweaker также добавляет строку</p>
+        <p>&quot;<span class="myb">lh %SystemRoot%\system32\kb16.com ru</span>&quot; в
+          %SYSTEMROOT%\SYSTEM32\autoexec.nt, если выключена, удаляет её.</p>
+        <p>Примечание: при загрузке XP Tweaker для проверки включена опция или
+          нет, использует только параметр <strong>STRING</strong> <span class="myb">00000409</span> (т.е.
+          не ищет строку в autoexec.nt). При записи в autoexec.nt XP Tweaker
+          сначала проверит, существует ли там строка &quot;<span class="myb">lh
+          %SystemRoot%\system32\kb16.com ru</span>&quot; и если она уже существует,
+          то запись в файл не производится.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Зависшие приложения</h2>
+
+<a name="lb3"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Интервал, по истечении которого не отвечающее приложение
+        считается зависшим:</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>По истечении этого времени Windows XP считает, что приложение зависло.
+          По умолчанию значение равно 5 000 миллисекунд.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING</strong> <span class="myb">HungAppTimeout</span>, значение
+          - время интервала в миллисекундах. XP Tweaker позволяет выставить значение
+          в диапазоне от 1 до 20 секунд.</p>
+        <p>&nbsp;</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/26734.asp" target="_new">Windows
+            2000 Resourse Kits</a> (HungAppTimeout)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb4"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Завершать зависшее приложение</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Интервал, в течение которого Windows XP ожидает, перед закрытием приложения.
+          Меньшее значение ускоряет процесс завершения работы, но это может привести
+          к тому, что будут закрываться не зависшие приложения. По умолчанию
+          интервал равен 20 000.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING</strong> <span class="myb">WaitToKillAppTimeout</span>,
+          значение - время интервала в миллисекундах. XP Tweaker позволяет выставить
+          значения от 1 до 30 секунд</p>
+        <p>&nbsp;</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/34637.asp" target="_new">Windows
+            2000 Resourse Kits</a> (WaitToKillAppTimeout)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb5"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Завершать зависший сервис</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Интервал, в течение которого Windows XP ожидает, перед закрытием зависшего
+          сервиса. Меньшее значение ускоряет процесс завершения работы, но это
+          может привести к тому, что будут закрываться не зависшие приложения.
+          По умолчанию интервал равен 20 000.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control</p>
+        <p><strong>STRING</strong> <span class="myb">WaitToKillServiceTimeout</span>,
+          значение - время интервала в миллисекундах. XP Tweaker позволяет выставить
+          значения от 1 до 60 секунд</p>
+        <p>&nbsp;</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/26734.asp" target="_new">Windows
+            2000 Resourse Kits</a> (WaitToKillServiceTimeout)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb6"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматически завершать зависшие приложения</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Эта опция используется для автоматического закрытия без всякого предупреждения
+          всех зависших программ. Удобно при завершении работы компьютера, если
+          приложение не отвечает, то не надо нажимать на кнопку, чтобы его завершить.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING </strong> <span class="myb">AutoEndTasks</span>, значение
+          1 - автоматически завершать зависшие приложения, 0 - ждать ввода пользователя</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Проверка файлов</h2>
+
+<a name="lb7"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Проверка файлов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Выполняет проверку и восстановление поврежденных системных файлов,
+          возможно при этом потребуется компакт-диск с дистрибутивом Windows
+          XP. XP Tweaker выполняет команду <span class="myb">sfc.exe /scannow.</span> Параметр
+          /scannow - немедленная проверка без выдачи запроса, вы также можете
+          использовать другие параметры, например, /scanonce - разовая проверка
+          при следующей загрузке системы, для более подробной информации запустите
+          в командной строке sfc без параметров. Если программа sfc находит,
+          что защищенный файл был переопределен, подходящая версия файла восстанавливается
+          из папки %SYSTEMROOT%\system32\dllcache или если таковой нет, с компакт-диска.
+          Более подробную информацию о защите файлов Windows XP вы можете найти
+          в справочной системе.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Путь к папке временных файлов</h2>
+
+<a name="lb9"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Путь к папке временных файлов</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>Некоторые старые программы не поддерживают длинные пути с пробелами.
+          Рекомендуется использовать путь в стиле DOS 8.3, например, с:\windows\temp.
+          Также этот параметр можно настроить в Свойствах системы - Дополнительно,
+          кнопка Переменные среды.</p>
+        <p class="myg">HKCU\Environment</p>
+        <p><strong>EXPAND STRING</strong> <span class="myb">TMP</span>,
+          значение - путь к папке временных файлов<br>
+      <strong>EXPAND STRING</strong> <span class="myb">TEMP</span>, значение - путь
+      к папке временных файлов</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>AVI файлы</h2>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbShmedia"></a>Корректное удаление avi файлов</td>
+  </tr>
+  <tr>
+    <td  class="nogui"><blockquote>
+        <p>В Windows XP часто возникают проблемы с удалением AVI файлов, система
+          сообщает, что файл занят программой. С помощью данной опции можно устранить
+          эту проблему.</p>
+        <p>Включение опции - XP Tweaker выполняет следующую команду:</p>
+        <p class="myb">regsvr32 /u %SystemRoot%\system32\shmedia.dll</p>
+        <p>Выключение опции (галочка снята)</p>
+        <p class="myb">regsvr32  %SystemRoot%\system32\shmedia.dll</p>
+        <p class="myb">&nbsp;</p>
+        <p>Состояние опции программа проверяет с помощью содержимого ключа</p>
+        <p class="myg">HKLM\SOFTWARE\Classes\CLSID\{87D62D94-71B3-4b9a-9489-5FE6850DC73E}\InProcServer32</p>
+        <p>Примечание: При включении опции, вкладка &quot;Сводка&quot; в свойствах AVI
+          файла будет отсутствовать. Не будет работать предварительный просмотр
+          в Проводнике.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

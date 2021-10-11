@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Корзина</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Корзина</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Название корзины</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Изменяет имя корзины. Обновите рабочий стол, чтобы изменения вступили
+          в силу.</p>
+        <p class="myg">HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}</p>
+        <p><strong>STRING</strong> <span class="myb">по умолчанию</span>, значение
+          - имя корзины<br>
+            <strong>STRING</strong> <span class="myb">LocalizedString</span>,
+            значение - имя корзины</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Добавить значок корзины в Мой компьютер</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Добавляет значок корзины в Мой компьютер. Обновите Проводник (нажмите
+          F5), чтобы изменения вступили в силу.</p>
+        <p align="left">В разделе <span class="myg"><br>
+          HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ MyComputer\NameSpace</span>,
+          необходимо создать ключ <span class="myb">{645FF040-5081-101B-9F08-00AA002F954E}</span>,
+          чтобы удалить значок корзины - удалите ключ</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Контекстное меню корзины</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Удаление и добавление новых пунктов в контекстное меню
+        корзины.</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Для удаления пункта меню, удалите соответствующий ключ в разделе:</p>
+        <p class="myg">HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\Shell</p>
+        <p>Чтобы добавить новое меню, создайте новый ключ. Значение <strong>STRING</strong> <span class="myb">по
+            умолчанию</span> - название пункта меню. Далее создайте подключ <span class="myg">Command</span>,
+            значение <strong>STRING</strong> <span class="myb">по умолчанию</span> которого
+            - исполняемая строка.</p>
+        <p>Пример добавления блокнота в контекстное меню программы:</p>
+        <p class="myg">HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\Shell\MyNotepad</p>
+        <p><strong>STRING</strong> <span class="myb">по умолчанию </span> = &quot;Блокнот&quot; </p>
+        <p class="myg">HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\Shell\MyNotepad</p>
+        <p align="left"><strong>STRING</strong> <span class="myb">по умолчанию </span> = &quot;notepad.exe&quot; (или
+          полный путь &quot;c:\windows\notepad.exe&quot;, измените его, если
+          каталог Windows отличается от приведенного)</p>
+      </blockquote></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

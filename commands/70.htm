@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Приложения</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Запрет запуска программ</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Разрешить запуск приложений, кроме указанных в списке *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKEY_CURRENT_USER\SOFTWARE\Microsoft\ Windows\CurrentVerson\Policies\Explorer </p>
+        <p><strong>DWORD</strong> <span class="myb">DisallowRun</span>, значение 1 - запрещает запуск приложений указанных
+          в списке:</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun</p>
+        <p>Параметры типа <strong>STRING</strong> - список запрещенных приложений.</p>
+        <p>&quot;1&quot; - &quot;program.exe&quot;<br>
+          &quot;2&quot; - &quot;thebat.exe&quot;<br>
+          &quot;3&quot; - &quot;icq.exe&quot;</p>
+      </blockquote></td>
+    </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Запретить запуск приложений, кроме указанных в списке *</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p class="myg">HKEY_CURRENT_USER\SOFTWARE\Microsoft\ Windows\CurrentVerson\Policies\Explorer </p>
+        <p><strong>DWORD</strong> <span class="myb">RestrictRun</span>,
+          значение 1 - запрещает запуск всех приложений, кроме системных и
+          приложений указанных в списке:</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun</p>
+        <p>Параметры типа <strong>STRING</strong> - список разрешенных приложений.</p>
+        </blockquote>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

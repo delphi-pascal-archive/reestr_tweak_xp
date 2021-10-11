@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>MSN Messenger</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - MSN Messenger</h1></td>
+    </tr>
+</table>
+	  
+<h2>MSN Messenger</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+<tr>
+  <td class="gui">Удалить встроенный Windows Messenger</td>
+</tr>
+<tr>
+  <td class="nogui"><blockquote>
+	  <p>Данная опция относится<span class="myr"> только к встроенному
+		  Windows Messenger</span>, если вы ставили более новую версию,
+		  то для ее удаления используйте &quot;Установку и удаление программ&quot; в
+		  Панели управления. При открытии Outlook запускает встроенную
+		  версию Windows Messenger, даже если установлена более новая
+		  версия, используйте данную опцию чтобы удалить встроенный Windows
+		  Messenger из системы.</p>
+	  <p>Если опция включена, XP Tweaker изменяет следующие параметры
+		в реестре:</p>
+	  <p class="myg">HKLM\SOFTWARE\Policies\Microsoft\Messenger\Client</p>
+	  <p> <strong>DWORD</strong> <span class="myb">PreventAutoRun</span>,
+		значение 1 - запрет автоматического запуска<br>
+			<strong>DWORD</strong> <span class="myb">PreventAutoUpdate</span>,
+			значение 1 - запрет обновлений<br>
+			  <strong>DWORD</strong> <span class="myb">PreventBackgroundDownload</span>,
+			  значение 1 - запрет загрузки файлов<br>
+			  <strong>DWORD</strong> <span class="myb">PreventRun</span>,
+			  значение 1 - запрет запуска</p>
+	  <p>Данные значения никак не влияют на удаление, а само удаление
+		происходит так:</p>
+	  <p>XP Tweaker выполняет команду <span class="myb">rundll32 advpack.dll,LaunchINFSection
+		  %SYSTEMROOT%\inf\msmsgs.inf,BLC.Remove</span></p>
+	  <p>Примечание: При запуске, XP Tweaker читает значение <strong>DWORD</strong> <span class="myb">PreventRun</span>,
+		если оно равно 1, то считается, что Windows Messenger уже удален
+		и опция становиться не доступной.</p>
+	  <p>Опция не доступна для <strong>Windows Server 2003</strong> (нет Windows Messenger)</p>
+	  <p>Если в Windows XP установлен пакет обновлений <strong>Servise Pack 1</strong>, то при выполнении команды произойдет ошибка <span class="myr"><strong>error unregistering the OCX 16422</strong></span>, игнорируйте ее, Windows Messenger удалится без проблем. Можно также использовать Панель управления - Установка и удаление программ для удаления Windows Messenger (только в XPSP1).</p>
+  </blockquote>
+  </td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

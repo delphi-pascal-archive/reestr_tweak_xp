@@ -1,0 +1,336 @@
+<html>
+<head>
+<title>Утилиты Windows XP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Утилиты Windows XP</h1></td>
+    </tr>
+</table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td  class="gui">Содержание</td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>&nbsp;</p>
+              <p><strong>Утилиты Windows XP</strong></p>
+              <p><a href="#seeme">Примечание</a></p>                           
+              <p><a href="#secpol">Локальные параметры безопасности</a></p>
+               <p><a href="#gpedit">Групповая политика (администрирование системы)</a></p>
+               <p><a href="#perfmon">Производительность системы</a></p>
+               <p><a href="#lusrmgr">Локальные пользователи и группы</a></p>
+               <p><a href="#compmgmt">Управление компьютером</a></p>
+               <p><a href="#devmgmt">Диспетчер устройств</a></p>
+               <p><a href="#diskmgmt">Управление дисками</a></p>
+               <p><a href="#eventvwr">Журнал событий</a></p>
+               <p><a href="#ciadv">Служба индексирования</a></p>
+               <p><a href="#fsmgmt">Общие папки (расшаренные ресурсы)</a></p>
+               <p><a href="#ntmsmgr">Съемные ЗУ</a></p>
+               <p><a href="#services">Службы Windows XP</a></p>
+               <p>&nbsp;</p>
+               <p><strong>Пути к системным утилитам</strong>
+              <p><a href="#cbDefrag">Использовать свою программу дефрагментации
+                  диска</a></p>
+              <p><a href="#cbCleanUp">Использовать свою программу очистки системы</a></p>
+              <p><a href="#cbBackup">Использовать свою программу для архивации
+                  данных</a></p>
+              <p>&nbsp;</p>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      <h2>Утилиты Windows XP        </h2>
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="seeme"></a>Примечание</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p align="right"> </p>
+              <p>Чтобы запустить оснастку консоли наберите в окне Запуск программы
+                (Пуск - Выполнить) название оснастки и нажмите ОК. Файлы оснастки
+                консоли представляет собой текстовый файл, использующий язык
+                XML. Для создания своих собственных оснасток используйте программу
+                Консоль управления (Пуск - Выполнить - mmc.exe)</p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="secpol"></a>Локальные параметры безопасности</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Политика паролей, учетных записей пользователей, назначение
+                прав пользователей, параметры безопасности и другое.</p>
+              <p>Оснастка консоли <span class="myb">secpol.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="gpedit"></a>Групповая политика (администрирование
+              системы)</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Огромное количество параметров для настройки системы. С помощью
+                данной консоли можно запретить доступ пользователя к отдельно
+                взятым оснасткам консоли см. Конфигурация пользователя - Административные
+                шаблоны - Компоненты Windows - Консоль управления Microsoft -
+                Запрещенные или разрешенные оснастки, справа необходимо выбрать
+                название оснастки и задать значение, запрещающее или разрешающее
+                доступ. Если доступ запрещен, система выдаст сообщение:</p>
+              <p> Приведенная ниже оснастка, указанная в данном документе, ограничена
+                политикой. Обратитесь к своему администратору за разъяснением. </p>
+              <p>Оснастка консоли <span class="myb">gpedit.msc</span> </p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="perfmon"></a>Производительность системы</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Огромное количество счетчиков производительности компьютера
+                (в т.ч. компьютера в сети) Загруженность процессора, памяти,
+                кэша, логических дисков. Большое количество настроек и возможностей.
+                Можно, например, узнать активность жесткого диска, его загруженность
+                или отследить сколько байт занимает отдельно взятая программа
+                в файле подкачки и т.д.</p>
+              <p>Оснастка консоли<span class="myb"> perfmon.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="lusrmgr"></a>Локальные пользователи
+              и группы</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Добавление новых пользователей в систему, создание новых групп
+                пользователей, задание членства в группах для пользователей и
+                настройка некоторых параметров.</p>
+              <p>Оснастка консоли <span class="myb">lusrmgr.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="compmgmt"></a>Управление компьютером</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Оснастка включает в себя множество из описанных оснасток.</p>
+              <p>Оснастка консоли <span class="myb">compmgmt.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="devmgmt"></a>Диспетчер устройств</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Управление всеми устройствами на компьютере.</p>
+              <p>Оснастка консоли <span class="myb">devmgmt.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+        <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="diskmgmt"></a>Управление дисками</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Управление разделами диска, форматирование, удаление, изменение
+                буквы раздела.</p>
+              <p>Оснастка консоли <span class="myb">diskmgmt.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="eventvwr"></a>Журнал событий</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Windows XP ведет журнал ошибок, предупреждений и уведомлений
+                системы. С помощью данной оснастки можно просмотреть события,
+                задать параметры журнала (например, размер файла) и очистить
+                его.</p>
+              <p>Оснастка консоли <span class="myb">eventvwr.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="ciadv"></a>Служба индексирования</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Позволяет индексировать документы на компьютере для последующего
+                быстрого их нахождения по содержанию. Более подробную справку
+                вы можете получить, запустив оснастку консоли и выбрав пункт
+                меню &quot;Вызов справки&quot;.</p>
+              <p>Оснастка консоли <span class="myb">ciadv.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="fsmgmt"></a>Общие папки (расшаренные
+              ресурсы)</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Создание и управление ресурсами доступными пользователям сети.</p>
+              <p>Оснастка консоли <span class="myb">fsmgmt.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="ntmsmgr"></a>Съемные ЗУ</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Управление съемными носителями.</p>
+              <p>Оснастка консоли <span class="myb">ntmsmgr.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+	  
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui"><strong><a name="services"></a>Службы Windows XP</strong></td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Служба это приложение, автоматически запускаемое при старте
+                системы или при необходимости. Для уменьшения времени загрузки
+                системы и освобождения некоторого количества памяти можно отключить
+                не нужные службы. Если Вы случайно изменили настройку службы
+                и забыли параметры установленные по умолчанию, воспользуйтесь
+                разделом справки Службы - Основные понятия - Стандартная настройка
+                служб, здесь приведены настройки наиболее важных служб Windows
+                XP.</p>
+              <p>Оснастка консоли <span class="myb">services.msc</span></p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Пути к системным утилитам</h2>
+      <a name="cbDefrag"></a>
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui">Использовать свою программу дефрагментации диска</td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>Вы можете задать свою программу дефрагментации диска, она будет
+                вызываться, если вы в свойствах диска, на вкладке Сервис нажмёте
+                на кнопку &quot;Выполнить дефрагментацию...&quot;</p>
+              <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\
+                MyComputer\DefragPath</p>
+              <p><strong>EXPAND STRING </strong>(<span class="myb">По умолчанию</span>),
+                система использует следующую командную строку &quot;%systemroot%\system32\dfrg.msc
+                %c:&quot;<br>
+          С помощью параметра %с передается имя диска.</p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      <a name="cbCleanUp"></a>
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui">Использовать свою программу очистки системы</td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>По умолчанию Windows XP использует утилиту для очистки системы
+                - CleanUP, вы можете заменить её на свою.</p>
+              <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\
+                MyComputer\cleanuppath</p>
+              <p><strong>EXPAND STRING </strong>(<span class="myb">По умолчанию</span>),
+                система использует следующую командную строку &quot;%SystemRoot%\system32\cleanmgr.exe
+                /D %c&quot;<br>
+          С помощью параметра %с передается имя диска. Для CleanUp если не задан
+          параметр /D, то параметр %с игнорируется и система предлагает пользователю
+          выбрать диск самостоятельно.</p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      <a name="cbBackup"></a>
+      <table width="99%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="gui">Использовать свою программу для архивации данных</td>
+        </tr>
+        <tr>
+          <td class="nogui"><blockquote>
+              <p>По умолчанию Windows XP использует утилиту для архивации данных
+                - BackUP, вы можете заменить её на свою.</p>
+              <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\
+                MyComputer\BackupPath</p>
+              <p><strong>EXPAND STRING </strong>(<span class="myb">По умолчанию</span>),
+                система использует следующую командную строку &quot;%SystemRoot%\system32\ntbackup.exe&quot;</p>
+              <p align="right"><a href="#Top">Наверх</a></p>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

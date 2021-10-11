@@ -1,0 +1,922 @@
+<html>
+<head>
+<title>Система</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+<center>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Система</h1></td>
+    </tr>
+</table>
+	 
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td  class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>        
+        <p><strong>Система</strong>        
+        <p><a href="#cbClearPageFileAtShutdown">Очистка файла подкачки перед перезагрузкой системы</a></p>
+        <p><a href="#cbAuto">Отключить встроенный отладчик Dr. Watson</a></p>
+		<p><a href="#cbNtfsDisableLastAccessUpdate">Не производить запись последнего доступа к файлам (только NTFS)</a></p>
+		<p><a href="#cbSfcDisable">Отключить System Files Protection (SFC)</a></p>
+		<p><a href="#cbEnableUDMA66">Включить поддержку UDMA-66 на чипсетах Intel *</a></p>
+		<p><a href="#lbAlwaysUnloadDLL">Автоматически выгружать не используемые библиотеки</a></p>
+		<p><a href="#lbNoInstrumentation">Отключить слежение Windows XP за пользователем</a></p>
+		<p><a href="#cbDefaultSeparateVDM">Запускать 16-битные программы в отдельных процессах</a></p>
+		<p><a href="#cbDoReport">Не отсылать в Microsoft отчеты об ошибках</a></p>
+		<p><a href="#cbPromptPasswordOnResume">Запрашивать пароль после выхода из Ждущего режима</a></p>
+		<p><a href="#cbEnable">Оптимизировать системные файлы во время загрузки (boot defrag)</a></p>
+		<p><a href="#cbCrashOnCtrlScroll">Принудительный вызов "стоп-ошибки" при нажатии Ctrl+Scroll Lock *</a></p>
+		<p><a href="#cbQuickEdit">Быстрое редактирование в командной строке</a></p>
+		<p><a href="#cbShutdownReasonUI">Выводить окно для ввода причины завершения работы</a></p>
+		<p><a href="#cboxErrorMode">Сообщения об ошибках</a></p>
+		<p><a href="#edtSourcePath">Путь к дистрибутиву Windows</a></p>
+		<p><a href="#lbConsolRecovery">Переписать консоль восстановления на жесткий диск</a></p>
+		<p><a href="#cboxAUOptions">Автоматические обновления Windows</a></p>
+		<p><a href="#lbEnablePrefetcher">Windows Prefetcher сервис</a></p>
+		<p><a href="#cboxSecondLevelDataCache">Настройка кэша второго уровня</a></p>
+		<p><a href="#cboxSfcQuota">Изменить размер квоты для dllcache</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Синхронизация времени</strong></p>
+		<p><a href="#udSpecialPollInterval">Интервал синхронизации системных часов компьютера с time-сервером</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Работа Windows с zip-архивами</strong></p>
+		<p><a href="#cbZipFolder">Отключить поддержку Windows XP zip-архивов </a></p>
+		<p>&nbsp;</p>
+		<p><strong>Восстановление системы</strong></p>
+		<p><a href="#cbRPLifeInterval">Время жизни точек восстановления</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Отказ системы</strong></p>
+		<p><a href="#cbAutoReboot">Автоматически перезагрузить компьютер </a></p>
+		<p><a href="#cbLogEvent">Записать событие в системный журнал</a></p>
+		<p><a href="#cbSendAlert">Отправить административное оповещение</a></p>
+		<p><a href="#cboxCrashDumpEnabled">Запись отладочной информации</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Параметры работы с памятью</strong></p>
+		<p><a href="#cbDisablePagingExecutive">Не использовать файл подкачки для хранения ядра системы</a></p>
+		<p><a href="#cbLargeSystemCache">Оптимизировать работу системного кэша</a></p>
+		<p><a href="#cbIOPageLockLimit">Оптимизировать кэш диска</a></p>
+		<p>&nbsp;</p>
+		<p><strong>X-Mouse</strong></p>
+		<p><a href="#cbUserPreferencesMask">Делать окно активным при наведении указателя *</a></p>
+		<p><a href="#cbUserPreferencesMask2">Делать окно поверх всех окон при наведении указателя *</a></p>
+		<p><a href="#udActiveWndTrkTimeout">Время задержки в миллисекундах *</a></p>
+		<p><a href="#cbSnapToDefaultButton">Перемещать указатель в диалоговых окнах к кнопке по умолчанию</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Консоль</strong></p>
+		<p><a href="#cbCMDAutoRun">Автоматически выполнять команды, при запуске консоли</a></p>
+     </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbClearPageFileAtShutdown"></a>Очистка файла подкачки перед перезагрузкой системы</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Очищает файл pagefile.sys перед перезагрузкой системы. В данном
+              файле может храниться конфиденциальная информация. Если данная опция
+              включена, возможно значительное увеличение времени выключения компьютера.</p>
+        <p align="left" class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session
+              Manager\Memory Management</p>
+        <p><strong>DWORD </strong><span class="myb">ClearPageFileAtShutdown</span>,
+          значение 1 или 0</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbAuto"></a>Отключить встроенный отладчик Dr. Watson</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Отключает встроенного отладчика Windows XP (программа
+              обнаружения ошибок). Если текущим отладчиком не является Dr. Watson,
+          он будет также отключен. Если опция выключена, то при ошибке в программе,
+          будет выводиться соответствующее сообщение об ошибке с кнопками ОК
+          и Отмена, при нажатии ОК - приложение завершается, а при нажатии на
+          отмену
+          запускается отладчик.</p>
+        <p>Примечание: можно отключить вывод окошка совсем см. опцию Сообщения
+          об ошибках</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug</p>
+        <p><strong>DWORD </strong><span class="myb">Auto</span>, значение 1 или
+              0</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbNtfsDisableLastAccessUpdate"></a>Не производить запись последнего доступа к файлам (только
+      NTFS)</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Ускоряет доступ к каталогам с большим количеством
+              файлов. Данная опция работает только с дисками с файловой системой
+              NTFS. На работу FAT32 никак не влияет. Чтобы узнать файловую
+              систему диска, щелкните правой кнопкой на имени диска в Моем компьютере
+              и выберите пункт меню свойства.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\FileSystem</p>
+        <p><strong>DWORD </strong><span class="myb">NtfsDisableLastAccessUpdate</span>,
+              значение 1 или 0</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbSfcDisable"></a>Отключить System Files Protection (SFC)</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Отключает блокировку системных файлов Windows XP,
+              будьте осторожны с этой опцией, т.к. системные фалы могут быть заменены
+              старыми версиями.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p> <strong>DWORD</strong> <span class="myb">SfcDisable</span>, параметр
+              может принимать различные значения, XP Tweaker для отключения SFC
+          ставит значение hex:ffffff9d (4294967197) или 0 для включения</p>
+        <p>Начиная с версии 1.30, XP Tweaker предлагает внести изменения в системную
+          библиотеку sfc_os.dll. Предварительно программа делает копию файла
+          sfc_os.xpt, проверяет версию и только после этого изменяет файл.
+          Это полностью отключит SFC. При отмене опции программа восстановит
+          файл sfc_os.xpt, если он существует.</p>
+        <p>Примечание: Если после применения опции был установлен SP1, то необходимо
+          удалить файл sfc_os.xpt из системной папки и после этого заново применить
+          опцию.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbEnableUDMA66"></a>Включить поддержку UDMA-66 на чипсетах Intel *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Необходимо перезагрузить компьютер, чтобы изменения
+              вступили в силу.</p>
+        <p class="myg">HKLM\System\CurrentControlSet\Control\Class\{4D36E96A-E325-11CE-BFC1-08002BE10318}\0000</p>
+        <p><strong>DWORD</strong> <span class="myb">EnableUDMA66</span>, значение
+              1 или 0</p>
+        <p>Примечание: прежде чем применить опцию, убедитесь, что ваше устройство
+          поддерживает UDMA-66 и используется 80-pin кабель.<br>
+          Данная возможность не должна использоваться для
+          UDMA-100,        необходимо установить драйвера контролера IDE.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="lbAlwaysUnloadDLL"></a>Автоматически выгружать не используемые библиотеки</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Разрешает Windows XP выгружать не используемые библиотеки,
+              тем самым, освобождая память. Если наблюдается нестабильная
+              работа системы при включенной опции, отключите её.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">AlwaysUnloadDLL</span>,
+              значение 1 - выгружать библиотеки, значение 0 - не выгружать</p>
+        <p class="myr">Примечание: включение данной опции может привести к невозможности
+          запуска XP Tweaker, в этом случае исправить значение можно только при
+          помощи редактора реестра!</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="lbNoInstrumentation"></a>Отключить слежение Windows XP за пользователем</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Windows XP постоянно записывает действия пользователя,
+              какие программы он запускал, какие открывал документы и т.д. В целях
+              безопасности данную опцию можно отключить.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD</strong> <span class="myb">NoInstrumentation</span>,
+              значение 1 - отключить слежение, значение 0 - включить</p>
+        <p class="myr">Примечание: <strong>НЕ БУДЕТ СОХРАНЯТЬСЯ</strong> список
+          часто вызываемых программ (в меню Пуск), недавние документы и пр.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbDefaultSeparateVDM"></a>Запускать 16-битные программы в отдельных процессах</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запускает приложения для MS-DOS и Windows 3.1 в отдельных
+              процессах. При крахе одного процесса, работа других не нарушится. Включение
+              данной опции потребует больше памяти под 16-битные программы.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\WOW</p>
+        <p><strong>STRING</strong> <span class="myb">DefaultSeparateVDM</span>,
+              значение &quot;yes&quot; - запускать программы в отдельных процессах,
+              другие игнорируются</p>
+        <p>&nbsp;</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/29997.asp" target="_new">Windows
+            2000 Resourse Kits</a> (DefaultSeparateVDM)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbDoReport"></a>Не отсылать в Microsoft отчеты об ошибках</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>С помощью данной опции можно отключить отсылку сообщений
+              об ошибках в Microsoft. Данную опцию, при необходимости, можно более
+              подробно настроить в Свойствах системы, вкладка Дополнительно, кнопка
+              отчет об ошибках.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\PCHealth\ErrorReporting</p>
+        <p><strong>DWORD</strong> <span class="myb">DoReport</span>, 0 - Отключить
+              отчет об ошибках, 1 - включить<br>
+                <strong>DWORD</strong> <span class="myb">ShowUI</span>, 0 - Отключить
+                сообщения о критических ошибках, 1 - включить сообщения о критических
+                ошибках, 2 - включить сообщения обо всех ошибках.</p>
+        <p>Если данная опция включена, XP Tweaker присваивает параметрам<span class="myb"> DoReport</span> и <span class="myb">ShowUI</span> значение
+              0, иначе обоим присваивает значение 1. Вы также можете настроить некоторые
+              другие опции (они будут работать, <strong>только</strong> если <span class="myb">DoReport</span> =
+              1 и <span class="myb">ShowUI</span> = 3)</p>
+        <p><strong>DWORD </strong><span class="myb">IncludeKernelFaults</span> -
+              Отчет об ошибках Windows XP (ошибки ядра), может принимать значения
+              1 или 0<br>
+              <strong>DWORD</strong> <span class="myb">IncludeMicrosoftApps</span> -
+          Отчет об ошибках программ от Майкрософт, может принимать значения 1 или
+          0<br>
+          <strong>DWORD</strong> <span class="myb">IncludeWindowsApps</span> - Отчет
+          об ошибках компонентов Windows XP, может принимать значения 1 или 0</p>
+        <p><strong>DWORD</strong> <span class="myb">AllOrNone</span> - Дает возможность
+              запрета отсылки сообщений об ошибках определенных приложений, значение
+              1 - отсылаются все, значение 0 - только выбранные приложения. Для того
+              чтобы выбрать приложение, его необходимо добавить в <br>
+              <span class="myg">HKLM\SOFTWARE\Microsoft\PCHealth\ErrorReporting\InclusionList</span>,
+          а чтобы исключить в <br>
+          <span class="myg">HKLM\SOFTWARE\Microsoft\PCHealth\ErrorReporting\ExclusionList</span>.</p>
+        <p> В данных разделах необходимо создать <strong>DWORD</strong> параметр
+              с названием программы и значением 1, например:</p>
+        <p><span class="myg">HKLM\SOFTWARE\Microsoft\PCHealth\ErrorReporting\ExclusionList</span><br>
+&quot;programm.exe&quot;=dword:00000001</p>
+        <p>исключает отсылку сообщений об ошибках программы programm.exe</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbPromptPasswordOnResume"></a>Запрашивать пароль после выхода из Ждущего режима</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Policies\Microsoft\Windows\System\Power</p>
+        <p><strong>DWORD </strong> <span class="myb">PromptPasswordOnResume</span>,
+              значение 1 - запрашивать пароль</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+      </td>
+    </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbEnable"></a>Оптимизировать системные файлы во время загрузки (boot defrag)</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p> Дефрагментация  файлов,
+          необходимых для старта операционной системы. Выключение этой функции
+          позволит на некоторое время уменьшить время загрузки, но со временем
+          она будет становиться все медленнее.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction</p>
+        <p><strong>STRING</strong> <span class="myb">Enable</span>,
+              значение &quot;Y&quot; - оптимизация включена, &quot;N&quot; - выключена</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+      </td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbCrashOnCtrlScroll"></a>Принудительный вызов &quot;стоп-ошибки&quot; при
+      нажатии Ctrl+Scroll Lock *</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p> Принудительный вызов &quot;синего экрана
+            смерти&quot; вручную. Данную возможность можно использовать при зависании
+            компьютера вместо нажатия reset. </p>
+        <p>Необходимо
+              перезагрузить компьютер, чтобы изменения вступили в силу. После
+          этого для вызова стоп-ошибки нужно удерживая клавишу Ctrl два раза
+          нажать на Scroll Lock.</p>
+        <p><span class="myg">HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters</span></p>
+        <p> <strong>DWORD</strong> <span class="myb">CrashOnCtrlScroll</span>, значение 1 - принудительный вызов ошибки
+          вручную включен</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbQuickEdit"></a>Быстрое редактирование в командной строке</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Позволяет быстро копировать/вставлять текст в консоли, используя кнопки
+          мыши. Левая кнопка используется для выделения текста в консоли, правая
+          для копирования (если в консоли имеется выделенный текст) или для вставки
+          текста. Чтобы настройка вступила в силу, необходимо перезапустить консоль.</p>
+        <p class="myg">HKCU\Console</p>
+        <p> <strong>DWORD</strong> <span class="myb">QuickEdit</span>,
+          значение 1 - быстрое редактирование включено, 0 - выключено.</p>
+        <p>Примечание: если опция включена, контекстное меню будет не доступно</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbShutdownReasonUI"></a>Выводить окно для ввода причины завершения работы</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Windows Server 2003 не дает завершить работу компьютера без ввода
+          причины завершения. С помощью данной опции можно отключить этот запрос.
+          В Windows XP этот режим по умолчанию выключен.</p>
+        <p class="myg">HKLM\Software\Policies\Microsoft\Windows NT\Reliability</p>
+        <p> <strong>DWORD</strong> <span class="myb">ShutdownReasonUI</span>,
+          значение 1 - запрос причины завершения включен, 0 - выключен.</p>
+        <p>Примечание: если параметр отсутствует, то Windows XP считает его равным
+          0, а Windows Server 2003 равным 1</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cboxErrorMode"></a>Сообщения об ошибках</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данный параметр задает, какие сообщения об ошибках
+              будут выводиться на экран</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Windows</p>
+        <p><strong>DWORD</strong> <span class="myb">ErrorMode</span>, может принимать
+              следующие значения</p>
+          <ul>
+              <ul>
+                <li>0 - Показывать все ошибки (По умолчанию)</li>
+                <li>1 - Только ошибки приложений, системные отключены</li>
+                <li>2 - Отключить все сообщения об ошибках</li>
+            </ul>
+          </ul>
+		<p align="right"><a href="#Top">Наверх</a></p></blockquote> 
+	  </td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="edtSourcePath"></a>Путь к дистрибутиву Windows</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Windows не дает стандартными способами изменить путь
+              к дистрибутиву, но вы можете изменить его с помощью данной опции.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup</p>
+        <p><strong>STRING</strong> <span class="myb">SourcePath</span>, полный
+              путь к дистрибутиву, например F:\ или C:\DISTRIB\WINXP\</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="lbConsolRecovery"></a>Переписать консоль восстановления на жесткий диск</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p align="left">Консоль восстановления Windows находится на CD-ROM
+              с Windows XP, но имеется возможность переписать её на жесткий диск
+              так, что при загрузке вы сможете выбрать: загружать XP или консоль
+              восстановления. Перед тем как щелкнуть по ссылке вставьте компакт-диск
+              с дистрибутивом Windows XP.<br>
+              <br>
+    XP Tweaker выполнить команду: <span class="myb">%путь к дистрибутиву%\i386\winnt32.exe
+    /cmdcons</span></p>
+        <p>После установки консоли, на системном диске появится папка cmdcons
+              размером 7-8 Мб, а в boot.ini появиться новая строка</p>
+        <p align="left">...\CMDCONS\BOOTSECT.DAT=&quot;Microsoft Windows XP Recovery Console&quot; /cmdcons</p>
+        <p>Выполните Пуск-&gt;Выполнить-&gt;msconfig перейдите на вкладку boot.ini
+              и убедитесь, что появился новый пункт меню.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cboxAUOptions"></a>Автоматические обновления Windows</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Управление автоматическим обновлением Windows XP. Также данную опцию
+          можно настроить следующим способом: Панель управления - Система - Автоматическое
+          обновление.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto
+          Update</p>
+        <p><strong>DWORD</strong> <span class="myb">AUOptions</span><br>
+              <strong>DWORD</strong> <span class="myb">AUState</span> </p>
+        <p>Windows XP использует следующие значения:</p>
+        <blockquote>
+          <p>Отключить автоматические обновления:</p>
+          <p><span class="myb">AUOptions</span> = 1<br>
+              <span class="myb">AUState</span> = 7</p>
+          <p>             Уведомлять о возможности загруки обновлений</p>
+          <p><span class="myb">AUOptions</span> = 2<br>
+              <span class="myb">AUState</span> = 2</p>
+          <p>             Загружать обновления, затем уведомлять о готовности к установке</p>
+          <p><span class="myb">AUOptions</span> = 3 и другие значения<br>
+              <span class="myb">AUState</span> = 2</p>
+          <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="lbEnablePrefetcher"></a>Windows Prefetcher сервис</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>В Windows XP есть специальный Prefetcher Service, его задача уменьшить
+          время запуска приложений и время загрузки системы. Файлы, используемые
+          этим сервисом, находятся в папке %systemroot%\prefetch. C помощью данной
+          опции Вы можете управлять данным сервисом.</p>
+        <p align="left" class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters</p>
+        <p><strong>DWORD</strong> <span class="myb">EnablePrefetcher</span>, параметр может принимать
+          следующие значения:</p>
+        <p>0 - отключить сервис</p>
+        <p>1 - упреждающая выборка приложений</p>
+        <p>2 - упреждающая выборка приложений, запускаемых во время загрузки
+          системы (используется <strong>Windows Server 2003</strong> по умолчанию)</p>
+        <p>3 - включены обе упреждающие выборки (пп. 1 и 2) используется Windows
+          XP по умолчанию</p>
+        <p>Перезагрузите компьютер, чтобы изменения вступили в силу.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cboxSecondLevelDataCache"></a>Настройка кэша второго уровня</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Опция задает значение кэша процессора второго уровня (L2 cache). Это
+          значение используется, в случае если Windows XP не сможет определить
+          размер кэша и позволяет полностью использовать ресурсы процессора.</p>
+        <p align="left" class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session
+          Manager\Memory Management</p>
+        <p><strong>DWORD</strong> <span class="myb">SecondLevelDataCache</span>,
+          значение - размер кэша второго уровня процессора в килобайтах, если
+          значение параметра равно 0, используется кэш равный 256 килобайт</p>
+        <p>Примечание: размер кэша вашего процессора можно узнать из документации
+          к нему.</p>
+		<p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/default.asp?url=/windows2000/techinfo/reskit/en-us/regentry/29929.asp" target="_new">Windows
+            2000 Resourse Kits</a> (SecondLevelDataCache)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cboxSfcQuota"></a>Изменить размер квоты для dllcache</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Опция задает значение квоты для папки %systemroot%\system32\dllcache. Папка используется Windows XP, Windows Server 2003 для хранения исходных версий системных файлов. Если 
+
+
+ System File Checker обнаружит изменение защищенного файла некорректной версией, он будет восстановлен из dllcache. </p>
+        <p>По умолчанию размер папки неограничен (более 4 тыс. терабайт) </p>
+        <p align="left" class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p><strong>DWORD</strong> <span class="myb">SfcQuota</span>, значение - </p>
+        <p>Примечание: размер кэша вашего процессора можно узнать из документации к нему.</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/default.asp?url=/windows2000/techinfo/reskit/en-us/regentry/29929.asp" target="_new">DISABLE LINKS se Kits</a> (SecondLevelDataCache)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+    </blockquote></td>
+  </tr>
+</table>
+<h2>Синхронизация времени</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="udSpecialPollInterval"></a>Интервал синхронизации системных часов компьютера с time-сервером</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Синхронизация времени вашего компьютера с сервером в Интернете. По
+          умолчанию Windows XP использует интервал в 7 дней. Чтобы настроить
+          сервер, с которым Windows XP будет сверять время, выберите в Панели
+          управления - Дата и время, затем перейдите на вкладку Время Интернета.</p>
+        <p class="myg">HKLM\SYSTEM\ControlSet001\Services\W32Time\TimeProviders\NtpClient</p>
+        <p><strong>DWORD</strong> <span class="myb">SpecialPollInterval</span>,
+          значение - интервал в секундах. XP Tweaker позволяет выставлять интервалы
+          кратные 24 часам.</p>
+        <p>Примечание: Значение интервала вступит в силу только после синхронизации
+          времени Windows или вручную.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Работа Windows с zip-архивами</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbZipFolder"></a>Отключить поддержку Windows XP zip-архивов </td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>По умолчанию Windows XP считает zip-файлы папками
+              - это удобно, если у вас быстрый компьютер. На медленных компьютерах
+              можно отключить эту возможность. Также Windows не будет искать файлы
+              в архивах, что значительно ускорит поиск.</p>
+        <p>Для отключения поддержки XP Tweaker исполняет команду:</p>
+        <p><span class="myb">regsvr32 /u /s zipfldr.dll</span>, а для включения <span class="myb">regsvr32
+                /s zipfldr.dll</span></p>
+        <p align="left">Параметр /u отключает поддержку, /s не выдаются сообщения.
+          Для определения включена поддержка или нет, XP Tweaker проверяет, существует
+          ли
+          параметр <span class="myg">HKEY_CLASSES_ROOT\.zip\CompressedFolder\ShellNew
+          </span> <strong>BINARY</strong><span class="myb"> Data</span>.
+              Если существует - поддержка включена, иначе выставляется галочка,
+          что означает - поддержка zip-архивов отключена.</p>
+        <p align="left">Примечание: опция не доступна для <strong>Windows Server 2003</strong></p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Восстановление системы</h2>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbRPLifeInterval"></a>Время жизни точек восстановления</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore</p>
+        <p><strong>DWORD</strong> <span class="myb">RPLifeInterval</span>, время
+                жизни точек восстановления в секундах. XP Tweaker позволяет выставить
+                значения от одного до 365 дней</p>
+        <p>*Вы можете задать количество мегабайт, которые использует восстановление
+              системы на каждом диске через Свойства системы-&gt;Восстановление
+              системы.</p>
+        <p>Примечание: опция не доступна для <strong>Windows Server 2003</strong>.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Отказ системы</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbAutoReboot"></a>Автоматически перезагрузить компьютер </td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Майкрософт всегда думает о пользователях, не прошёл
+              мимо и факт зависания компьютера. Теперь вам не надо тянуться к кнопке
+              Reset, компьютер перезагрузиться самостоятельно, если произойдет непоправимая
+              ошибка. Данную опцию можно настроить в Свойствах системы, вкладка Дополнительно,
+              раздел Загрузка и восстановление.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\CrashControl</p>
+        <p><strong>DWORD</strong> <span class="myb">AutoReboot</span>, значение
+              1 - перезагружать компьютер, 0 - не перезагружать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbLogEvent"></a>Записать событие в системный журнал</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Производит запись в журнал об ошибке системы, если
+              компьютером пользуется несколько человек и вам интересно, когда произошло
+              зависание компьютера, включите данную опцию, иначе имеет смысл её отключить.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\CrashControl</p>
+        <p><strong>DWORD</strong> <span class="myb">LogEvent</span>, значение
+              1 - вести запись журнала, 0 - не вести</p>
+        <p>Примечание: опция не используется для <strong>Windows Server 2003</strong></p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbSendAlert"></a>Отправить административное оповещение</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Оповещение администраторов системы при возникновении
+              ошибки.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\CrashControl</p>
+        <p><strong>DWORD </strong><span class="myb">SendAlert</span>, значение
+              1 - отправлять сообщение администраторам, 0 - не отправлять</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cboxCrashDumpEnabled"></a>Запись отладочной информации</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данную опцию следует включать, если вы гений в двоичных
+              кодах :) Для всех остальных рекомендуется отключить данную опцию, т.к.
+              при непоправимой ошибке система может довольно долго записывать отладочную
+              информацию и её размер может быть равен размеру оперативной памяти,
+              в зависимости от выбранных деталей отчета.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\CrashControl</p>
+        <p><strong>DWORD </strong><span class="myb">CrashDumpEnabled</span>,
+              значение 0 - запись не ведется, 1 - Полный дамп памяти
+          (создание файла, равного размеру оперативной памяти) , 2 - Дамп
+              памяти ядра, 3 - Малый дамп памяти (64КБ)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Параметры работы с памятью</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbDisablePagingExecutive"></a>Не использовать файл подкачки для хранения ядра системы</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p> По умолчанию WinXP выгружает ядро и системные драйвера в файл подкачки, если они не используются. С помощью данной опции можно указать WinXP хранить ядро и системные драйвера всегда в памяти. <br>
+          <br>
+          <span class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management </span><br>
+<br>
+<strong>DWORD</strong> <span class="myb">DisablePagingExecutive</span>, 1 - не использовать файл подкачки для хранения ядра системы, 0 - использовать (по умолчанию) <br>
+</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/29931.asp" target="_new">Windows
+            2000 Resourse Kits</a> (Memory Management, DisablePagingExecutive)</p>
+		<p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbLargeSystemCache"></a>Оптимизировать работу системного кэша *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Используйте данную опцию, если у вас 512 МБ памяти
+              или больше. Данная опция увеличит производительность Windows XP. Рекомендуется использовать данную опция, если компьютер используется в качестве сервера или работа ведется в программах, для которых требуется кэш большого размера.</p>
+        <p align="left" class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session
+              Manager\Memory Management</p>
+        <p><strong>DWORD</strong> <span class="myb">LargeSystemCache</span>,
+              значение 1 - использовать, 0 - не использовать</p>
+        <p>Примечание: в<strong> Windows Server 2003</strong> по умолчанию опция включена.</p>
+        <p>&nbsp;</p>
+        <p><strong>Ссылки по теме:</strong></p>
+        <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/29933.asp" target="_new">Windows
+            2000 Resourse Kits</a> (Memory Management, LargeSystemCache)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbIOPageLockLimit"></a>Оптимизировать кэш диска</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+      <p><strong>Примечание: </strong></p>
+      <p>Эта опция только для Windows NT и Windows 2000 без сервис пака. </p>
+      <p>&nbsp;</p>
+      <p>Данная опция увеличит число страниц, которые система
+            будет читать или писать на жесткий диск за один раз. Исходя из этого,
+            должна вырасти производительность.</p>
+      <p align="left" class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session
+              Manager\Memory Management</p>
+      <p><strong>DWORD</strong> <span class="myb">IOPageLockLimit</span>, значение
+              параметра задаётся в шестнадцатеричной системе от hex:1 до hex:FFFFFFFF
+              байт. Если параметр не существует
+        или равен 0 (по умолчанию), то используется кэш равный 512 Кб. Рекомендуются
+              следующие значения:</p>
+    </blockquote>      <table width="300" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="124"  class="gui"><div align="center"><p><strong>Объём RAM компьютера</strong></p></div>
+            </td>
+            <td width="174"  class="gui"><div align="center">
+                <p><strong>Рекомендуемое значение параметра IOPageLockLimit</strong></p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="nogui">128 МБ и более</td>
+            <td class="nogui">16384 КБ (16 МБ)</td>
+          </tr>
+          <tr>
+            <td class="nogui">160 МБ и более</td>
+            <td class="nogui">32768 КБ (32 МБ)</td>
+          </tr>
+          <tr>
+            <td class="nogui">256 МБ и более</td>
+            <td class="nogui">65536 КБ (64 МБ)</td>
+          </tr>
+          <tr>
+            <td class="nogui">512 МБ и более</td>
+            <td class="nogui">131072 КБ (128 МБ)</td>
+          </tr>
+        </table>
+        <table width="300" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td  class="gui"><div align="center">
+                <p><strong>Объём RAM компьютера</strong></p>
+              </div>
+            </td>
+            <td  class="gui"><div align="center">
+                <p><strong>Максимальное значение параметра</strong></p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="nogui">Менее 64 МБ</td>
+            <td class="nogui">Объём RAM минус 7 МБ</td>
+          </tr>
+          <tr>
+            <td class="nogui">64 МБ - 500 МБ</td>
+            <td class="nogui">Объём RAM минус 16 МБ</td>
+          </tr>
+          <tr>
+            <td class="nogui">512 Мб и более</td>
+            <td class="nogui">Объём RAM минус 64 МБ</td>
+          </tr>
+        </table>        <p>&nbsp;</p>        
+        <blockquote>
+          <p><strong>Ссылки по теме:</strong></p>
+          <p><a href="http://support.microsoft.com/default.aspx?scid=kb%3Ben-us%3B121965" target="_new" >Microsoft
+                Knowledge Base Article - 121965</a> (HOWTO: Change Max Memory
+                Allowed with MmProbeAndLockPages)</p>
+          <p><a href="http://support.microsoft.com/default.aspx?scid=kb%3Ben-us%3B102985" target="_new">Microsoft
+              Knowledge Base Article - 102985</a> (REG: CurrentControlSet Entries
+              PART 2: SessionManager)</p>
+          <p><a href="http://www.microsoft.com/windows2000/techinfo/reskit/en-us/regentry/29932.asp" target="_new">Windows
+          2000 Resourse Kits</a> (Memory Management, IoPageLockLimit)</p>
+          <p>&nbsp;          </p>
+          <p align="right"><a href="#Top">Наверх</a></p>
+        </blockquote></td>
+  </tr>
+</table>
+
+    <h2>X-Mouse</h2>
+    <table width="99%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="gui"><a name="cbUserPreferencesMask"></a>Делать окно активным при наведении указателя *</td>
+      </tr>
+      <tr>
+        <td class="nogui"><blockquote>
+            <p>1. Делать окно активным при наведении указателя</p>
+            <p>2. Делать окно поверх всех окон при наведении указателя</p>
+            <p align="left" class="myg">HKCU\Control Panel\Desktop</p>
+            <p><strong>BINARY</strong> <span class="myb">UserPreferencesMask</span>,
+              может принимать следующие значения:</p>
+            <p>Включены обе опции hex:df,3e,07,80 <br>
+              Включена только первая опция
+              hex:9f,3e,07,80 <br>
+              Включена только вторая опция
+              (без включения первой, не имеет никакого эффекта)  hex:de,3e,07,80<br>
+              Обе опции отключены hex:9e,3e,07,80</p>
+            <p align="right">
+              <a href="#Top">Наверх</a></p>
+        </blockquote>
+        </td>
+      </tr>
+    </table>
+
+    <table width="99%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="gui"><a name="cbUserPreferencesMask2"></a>Делать окно поверх всех окон при наведении указателя
+          *</td>
+      </tr>
+      <tr>
+        <td class="nogui"><blockquote>
+            <p align="left" class="myg">HKCU\Control Panel\Desktop</p>
+            <p><strong>BINARY</strong> <span class="myb">UserPreferencesMask</span>,
+              значения <a href="#cbUserPreferencesMask">cм. выше</a></p>
+            <p align="right"><a href="#Top">Наверх</a></p>
+        </blockquote>
+        </td>
+      </tr>
+    </table>
+    <table width="99%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="gui"><a name="udActiveWndTrkTimeout"></a>Время задержки в
+          миллисекундах *</td>
+      </tr>
+      <tr>
+        <td class="nogui"><blockquote>
+            <p>Время задержки перед установкой окна активным.</p>
+            <p align="left" class="myg">HKCU\Control Panel\Desktop</p>
+            <p><strong>DWORD</strong> <span class="myb">ActiveWndTrkTimeout</span>,
+              значение - интервал в миллисекундах.</p>
+            <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+        </td>
+      </tr>
+    </table>
+	
+    <table width="99%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="gui"><a name="cbSnapToDefaultButton"></a>Перемещать указатель
+          в диалоговых окнах к кнопке по умолчанию</td>
+      </tr>
+      <tr>
+        <td class="nogui"><blockquote>
+            <p>Автоматическое перемещение курсора мыши на активную по умолчанию
+              кнопку  диалогового окна. При редактировании реестра вручную, параметр
+              вступит в силу только после перезагрузки системы.</p>
+            <p align="left" class="myg">HKCU\Control Panel\Mouse</p>
+            <p><strong>STRING </strong><span class="myb">SnapToDefaultButton</span>,
+              значение  1 - опция включена, 0 - отключена</p>
+            <p align="right"><a href="#Top">Наверх</a></p>
+          </blockquote>
+        </td>
+      </tr>
+    </table>
+	<h2>Консоль</h2>
+	<table width="99%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="gui"><a name="cbCMDAutoRun"></a>Автоматически выполнять команды, при запуске консоли</td>
+      </tr>
+      <tr>
+        <td class="nogui"><blockquote>
+            <p>Опция позволяет указать командный файл, который будет запускаться каждый раз при запуске консоли.</p>
+            <p align="left" class="myg">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor</p>
+            <p><strong>STRING </strong><span class="myb">AutoRun</span>, значение - путь к командном файлу</p>
+            <p>Примечание: путь к файлу необходимо указывать по правилу 8.3 (например, &quot;C:\DOCUME~1\dmc\РАБОЧИ~1\Autocm.cmd&quot;)</p>
+            <p align="right"><a href="#Top">Наверх</a></p>
+        </blockquote></td>
+      </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

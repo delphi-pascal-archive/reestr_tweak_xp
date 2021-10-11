@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>Проводник</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Защита проводника</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>&nbsp;</p>
+        <p><strong>Защита проводника</strong></p>
+        <p><a href="#lb1">Сделать недоступным контекстное меню Проводника *</a></p>
+        <p><a href="#lb2">Запретить настройку панели инструментов (включая Internet Explorer) *</a></p>
+        <p><a href="#lb3">Удалить меню Файл *</a></p>
+        <p><a href="#lb4">Удалить кнопку Поиск с панели инструментов *</a></p>
+		<p><a href="#lb5">Использовать классический вид Проводника *</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Запретить доступ к дискам</strong></p>
+		<p><a href="#listNoViewOnDrive">Запретить доступ к дискам *</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Скрыть диски в проводнике</strong></p>
+		<p><a href="#listNoDrives">Скрыть диски в проводнике *</a></p>
+		<p>&nbsp;</p>
+      </blockquote></td>
+    </tr>
+</table>
+	  
+<a name="lb1"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Сделать недоступным контекстное меню Проводника *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>При щелчке правой кнопкой мыши, а также при нажатии Shift + F10 контекстное
+          меню проводника не будет появляться. Чтобы изменения вступили в силу,
+          необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD</strong> <span class="myb">NoViewContextMenu</span>,
+          значение 1 - запрещает появление меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb2"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить настройку панели инструментов (включая Internet
+        Explorer) *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрет на изменение панели инструментов проводника. Чтобы изменения
+          вступили в силу, необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoToolbarCustomize</span>,
+          значение 1 - запрещает изменение панели инструментов</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb3"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Удалить меню Файл *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Удаляет меню Файл из проводника. Чтобы изменения вступили в силу,
+          необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoFileMenu</span>, значение
+          1 - удаляет меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb4"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Удалить кнопку Поиск с панели инструментов *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Удаляет кнопку Поиск с панели инструментов, но F3 продолжает действовать.
+          Чтобы изменения вступили в силу, необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoShellSearchButton</span>,
+          значение 1 - удаляет кнопку Поиск</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb5"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать классический вид Проводника *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает использовать веб вид папок, отображающий список типичных
+          задач.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">ClassicShell</span>, значение
+          1 - использовать классический вид</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Запретить доступ к дискам</h2>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="listNoViewOnDrive"></a>Запретить доступ к дискам *</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Запрещает доступ к просмотру содержимого дисков через Проводник (запуск
+          программ разрешен)</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoViewOnDrive</span>, значение
+          сумма &quot;значений дисков&quot;. Значение 0 - разрешен доступ ко
+          всем дискам, значение 67108863 (hex:3ffffff) - запретить доступ ко
+          всем дискам (A:
+          - Z:)</p>
+        <p>Значения дисков:</p>
+        <p>A: - 1 (2^0)<br>
+          B: - 2 (2^1)<br>
+          C: - 4 (2^2)<br>
+          D: - 8 (2^3)<br>
+          ...<br>
+          Z:- 33554432 (2^25)
+</p>
+        <p>Чтобы запретить доступ к дискам A и D необходимо сложить 1 + 8 = 9.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+        </blockquote>
+    </td>
+  </tr>
+</table>
+
+<h2>Скрыть диски в проводнике</h2>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="listNoDrives"></a>Скрыть диски в проводнике *</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Скрывают диски в Проводнике. (В других файл-менеджерах диски будут
+          отображаться)</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoDrives</span>, значение
+          рассчитывается точно также как и для запрета доступа к дискам (см.
+          выше)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

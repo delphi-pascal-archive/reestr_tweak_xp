@@ -1,0 +1,803 @@
+<head>
+<title>Меню Пуск</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Меню Пуск</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>&nbsp;</p>
+        <p><strong>Меню Пуск</strong></p>
+        <p><a href="#cbNoUserNameInStartMenu">Убрать имя пользователя из меню Пуск *</a></p>
+        <p><a href="#cbStartMenuLogoff">Удалить пункт меню Выход из системы (Logoff) *</a></p>
+		<p><a href="#cbNoStartMenuMFUprogramsList">Удалить список часто используемых программ *</a></p>
+		<p><a href="#cbNoRecentDocsHistory">Не вести историю открытия документов</a></p>
+		<p><a href="#cbClearRecentDocsOnExit">Очистка списка недавно использовавшихся документов</a></p>
+		<p><a href="#cbStart_AutoCascade">Раскрывать меню при наведении и задержке указателя</a></p>
+		<p><a href="#cbStart_NotifyNewApps">Выделять недавно установленные программы *</a></p>
+		<p><a href="#cbNoCommonGroups">Не показывать общие ярлыки (All Users)</a></p>
+		<p><a href="#cbMaxRecentDocs">Количество ярлыков в меню "Пуск - Документы"</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Элементы меню Пуск</strong></p>
+		<p><a href="#cbStartMenuAdminTools">Меню в стиле Windows XP</a></p>
+		<p><a href="#cbStart_AdminToolsRoot">Администрирование</a></p>
+		<p><a href="#cbStart_ScrollPrograms">Использовать прокрутку для меню Программы</a></p>
+		<p><a href="#cbStart_ShowRun">Команда "Выполнить"</a></p>
+		<p><a href="#cbStartMenuFavorites">Меню "Избранное"</a></p>
+		<p><a href="#cbStart_ShowMyDocs">Мои документы</a></p>
+		<p><a href="#cbStart_ShowMyComputer">Мой компьютер</a></p>
+		<p><a href="#cbStart_ShowMyPics">Мои рисунки</a></p>
+		<p><a href="#cbStart_ShowMyMusic">Моя музыка</a></p>
+		<p><a href="#cbStart_ShowControlPanel">Панель управления</a></p>
+		<p><a href="#cbStart_ShowSearch">Поиск</a></p>
+		<p><a href="#cbStart_EnableDragDrop">Разрешить перетаскивание объектов</a></p>
+		<p><a href="#cbStart_ShowNetPlaces">Сетевое окружение</a></p>
+		<p><a href="#cbStart_ShowNetConn">Сетевые подключения</a></p>
+		<p><a href="#cbStart_ShowHelp">Справка и поддержка</a></p>
+		<p><a href="#cbStart_ShowRecentDocs">Отображать пункт меню Недавние документы</a></p>
+		<p><a href="#cbStart_LargeMFUIcons">Большие значки в главном меню</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Классический вид меню</strong></p>
+		<p><a href="#ClassicMenu">Классический вид меню</a></p>
+		<p><a href="#StartMenuScrollPrograms">Использовать прокрутку для меню "Программы"</a></p>
+		<p><a href="#IntelliMenus">Использовать сокращенные меню</a></p>
+		<p><a href="#Start_LargeIcons">Мелкие значки в главном меню</a></p>
+		<p><a href="#StartMenuRun">Отображать команду "Выполнить"</a></p>
+		<p><a href="#StartMenuLogoff">Отображать команду "Завершение сеанса"</a></p>
+		<p><a href="#StartMenuAdminTools">Отображать меню "Администрирование"</a></p>
+		<p><a href="#StartMenuFavorites">Отображать папку "Избранное"</a></p>
+		<p><a href="#StartMenuChange">Разрешить перетаскивание объектов</a></p>
+		<p><a href="#CascadeControlPanel">Раскрывать "Панель управления"</a></p>
+		<p><a href="#CascadeMyDocuments">Раскрывать папку "Мои документы"</a></p>
+		<p><a href="#CascadeMyPictures">Раскрывать папку "Мои рисунки"</a></p>
+		<p><a href="#CascadePrinters">Раскрывать папку "Принтеры"</a></p>
+		<p><a href="#CascadeNetworkConnections">Раскрывать "Сетевые подключения"</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Задержка выпадения меню *</strong></p>
+		<p><a href="#MenuShowDelay">Задержка выпадения меню *</a></p>
+		<p>&nbsp;</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbNoUserNameInStartMenu"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Убрать имя пользователя из меню Пуск *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Убирает имя пользователя из меню Пуск (только если меню в стиле XP).
+          Чтобы изменения вступили в силу, необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD </strong><span class="myb">NoUserNameInStartMenu</span>,
+          значение 1 - убирает имя пользователя, 0 - показывать имя пользователя</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStartMenuLogoff"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Удалить пункт меню Выход из системы (Logoff) *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запретить выход из системы из меню Пуск. Чтобы изменения вступили
+          в силу, необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">StartMenuLogoff</span>,
+          значение 1 - удаляет кнопку из меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbNoStartMenuMFUprogramsList"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Удалить список часто используемых программ *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Не путайте данный параметр с &quot;Недавно использовавшимися документами&quot;.
+          Данный параметр убирает часто использующиеся программы, которые появляются
+          в меню пуск, в левом столбце (только в стиле Windows XP). Чтобы изменения
+          вступили в силу, необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoStartMenuMFUprogramsList</span>,
+          значение 1 - удаляет список</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbNoRecentDocsHistory"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Не вести историю открытия документов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Не вести историю &quot;Недавно использовавшихся документов&quot;.
+          Windows XP создает в папке Documents and Settings\%USERNAME%\Recent
+          ярлыки к запускаемым программам. Вы можете отключить данную возможность,
+          если не пользуетесь ими.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoRecentDocsHistory</span>,
+          значение 1 - история открытия документов не ведется</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbClearRecentDocsOnExit"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Очистка списка недавно использовавшихся документов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Очитка списка происходит во время выхода из системы (logout) или перезагрузки
+          компьютера.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">ClearRecentDocsOnExit</span>,
+          значение 1 - список очищается</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_AutoCascade"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Раскрывать меню при наведении и задержки указателя</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Если опция включена, меню автоматически раскрывается наведении и задержки
+          указателя, иначе необходимо щелкнуть левой кнопкой мыши для его открытия.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_AutoCascade</span>,
+          значение 1 - раскрывать меню автоматически, 0 - только после щелчка
+          мыши.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_NotifyNewApps"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Выделять недавно установленные программы *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Подсвечивать недавно установленные программы. Чтобы изменения вступили
+          в силу, необходимо перезагрузиться.</p>
+        <p>HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_NotifyNewApps</span>,
+          значение 1 - раскрывать меню автоматически, 0 - только после щелчка
+          мыши.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbNoCommonGroups"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Не показывать общие ярлыки (All Users)</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Не добавлять в меню Пуск общие ярлыки. Папка с общими ярлыками находится
+          Documents and Settings\All Users\Главное меню</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoCommonGroups</span>, значение
+          1 - ярлыки из общего меню не добавляются</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbMaxRecentDocs"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Количество ярлыков в меню &quot;Пуск - Документы&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Количество ярлыков, которое будет отображаться в папке &quot;Недавно
+          использовавшиеся документы&quot;. По умолчанию Windows XP использует
+          15 ярлыков.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">MaxRecentDocs</span>, значение
+          - количество ярлыков</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Элементы меню Пуск</h2>
+
+<a name="cbStartMenuAdminTools"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Меню в стиле Windows XP</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Примечание: переключатель &quot;Меню в стиле XP&quot; и &quot;Классический
+          вид меню&quot; типа никак не влияет на меню. В зависимости от выбранного
+          параметра вам будет предложено настроить опции для соответствующих
+          меню. Оба меню используют различные параметры в реестре (см. ниже),
+          исключением составляет параметр <span class="myb">StartMenuAdminTools</span>,
+          он используется обоими типами меню, но меню в стиле XP использует тип <strong>DWORD</strong>,
+          а классическое меню <strong>строковый</strong> тип. В зависимости от
+          выбранного положения переключателя, параметр будет сохраняться, соответственно,
+          с типом <strong>DWORD</strong> для меню в стиле XP и <strong>строковым</strong> типом
+          для классического стиля.</p>
+        <p>Существует две возможности скрывать/показывать меню, а именно два
+          ключа<br>
+            <span class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</span> и<br>
+            <span class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</span> или
+            такой же ключ в <span class="myg">HKEY_LOCAL_MACHINE<br>
+            </span>первый ключ просто скрывает/показывает пункты меню и их легко
+            исправить стандартными средствами Windows XP, второй же ключ запрещает/разрешает
+            показ меню, изменение параметров в этом ключе имеет больший приоритет
+            и не изменяется стандартными средствами Windows XP. (см. раздел Защита
+            - Меню Пуск)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_AdminToolsRoot"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><strong>Администрирование</strong></td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Отображать в меню &quot;Пуск&quot;</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_AdminToolsRoot</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p>Отображать в меню &quot;Все программы&quot;</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">StartMenuAdminTools</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать</p>
+        <p>Примечание: Windows XP не позволяет выбрать значение так, чтобы пункт
+          меню Администрирование отображался в главном меню и не отображался
+          в меню &quot;Все программы&quot;, но вы можете это сделать с помощью
+          XP Tweaker.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ScrollPrograms"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать прокрутку для меню Программы </td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Если прокрутка включена, то меню все программы будет в один столбец
+          и для навигации по нему необходимо подвести курсор мыши к краю экрана.
+          Иначе при большом количестве установленных программ может появиться
+          два и более столбцов.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ScrollPrograms</span>,
+          значение 0 - не использовать прокрутку меню, 1 - использовать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowRun"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Команда &quot;Выполнить&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Отображать/скрыть пункт меню выполнить</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowRun</span>, значение
+          0 -скрыть пункт меню, 1 - показывать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStartMenuFavorites"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Меню &quot;Избранное&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Показывать/скрыть пункт меню избранного Internet Explorer. Его удобно
+          использовать, если вы работаете с Internet Explorer, если вы работаете
+          с другим браузером, который использует свою папку избранного, этот
+          пункт меню зачастую теряет смысл. Пункт меню &quot;Избранное&quot; по
+          умолчанию ссылается на папку Documents and Settings\%USERNAME%\Избранное.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">StartMenuFavorites</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowMyDocs"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Мои документы</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Эта папка по умолчанию находится в Documents and Settings\%USERNAME%\Мои
+          документы</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowMyDocs</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowMyComputer"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Мой компьютер</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowMyComputer</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowMyPics"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Мои рисунки</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Эта папка по умолчанию находится в Documents and Settings\%USERNAME%\Мои
+          документы\Мои рисунки</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowMyPics</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowMyMusic"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Моя музыка</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Эта папка по умолчанию находится в Documents and Settings\%USERNAME%\Моя
+          музыка</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowMyMusic</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowControlPanel"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Панель управления</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowControlPanel</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowSearch"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Поиск</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowSearch</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_EnableDragDrop"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Разрешить перетаскивание объектов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Разрешить перетаскивание объектов с помощью мышки.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_EnableDragDrop</span>,
+          значение 1 - разрешить перетаскивание объектов, 0 - запретить</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowNetPlaces"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Сетевое окружение</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowNetPlaces</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowNetConn"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Сетевые подключения</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Ссылка на данную папку находится в Панели управления.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowNetConn</span>,
+          значение 0 - не отображать пункт меню, 1 - ссылка на папку сетевых
+          подключений, 2 - отображать как меню &quot;Подключение&quot;</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowHelp"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Справка и поддержка</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowHelp</span>, значение
+          0 - не отображать пункт меню, 1 - отображать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_ShowRecentDocs"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Отображать пункт меню Недавние документы</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Эта папка по умолчанию находится в Documents and Settings\%USERNAME%\Recent</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_ShowRecentDocs</span>,
+          значение 0 - не отображать пункт меню, 1 - отображать как ссылку, 2
+          - отображать как меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbStart_LargeMFUIcons"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Большие значки в главном меню</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Вид отображения значков в главном меню. Этот параметр влияет только
+          на левый столбец меню в стиле XP.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">Start_LargeMFUIcons</span>,
+          значение 0 - в меню отображаются маленькие значки, 1 - большие</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Классический вид меню</h2>
+
+<a name="ClassicMenu"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Классический вид меню</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Параметры меню классического типа сохраняются в строковом виде. Значение &quot;YES&quot; означает,
+          что опция включена. Другие значения игнорируются (т.е. считается, что
+          опция выключена). Для выключения опции рекомендуется ставить параметр &quot;NO&quot;.</p>
+        <p>Примечание: <span class="myr">в данном случае значения параметров &quot;YES&quot;, &quot;Yes&quot; и &quot;yes&quot; -
+            разные, используйте только &quot;YES&quot; чтобы опция вступила в
+            силу.</span></p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="StartMenuScrollPrograms"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать прокрутку для меню &quot;Программы&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Если прокрутка включена, то меню все программы будет в один столбец
+          и для навигации по нему необходимо подвести курсор мыши к краю экрана.
+          Иначе при большом количестве установленных программ может появиться
+          два и более столбцов.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING</strong> <span class="myb">StartMenuScrollPrograms</span>,
+          значение &quot;YES&quot; - прокрутка меню используется </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="IntelliMenus"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать сокращенные меню</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Если опция включена, то сначала появляется меню, содержащее часто
+          используемые пункты меню.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD </strong> <span class="myb">IntelliMenus</span>, значение
+          1 - использовать сокращенные меню, 0 - не использовать </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="Start_LargeIcons"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Мелкие значки в главном меню</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD </strong> <span class="myb">Start_LargeIcons</span>,
+          если параметр существует - используются большие иконки (Windows XP
+          в качестве значения параметра использует 1), удалите параметр, чтобы
+          использовать маленькие значки </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="StartMenuRun"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Отображать команду &quot;Выполнить&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD </strong> <span class="myb">StartMenuRun</span>, значение
+          1 - отображать пункт меню, 0 - не отображать </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="StartMenuLogoff"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Отображать команду &quot;Завершение сеанса&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD </strong> <span class="myb">StartMenuLogoff</span>,
+          значение 1 - отображать пункт меню, 0 - не отображать </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="StartMenuAdminTools"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Отображать меню &quot;Администрирование&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING </strong> <span class="myb">StartMenuAdminTools</span>,
+          значение &quot;YES&quot; - отображать пункт меню </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="StartMenuFavorites"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Отображать папку &quot;Избранное&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD </strong> <span class="myb">StartMenuFavorites</span>,
+          значение 1 - отображать пункт меню, 0 - не отображать </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="StartMenuChange"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Разрешить перетаскивание объектов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD </strong><span class="myb">StartMenuChange</span>, значение
+          1 - разрешить перетаскивание </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="CascadeControlPanel"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Раскрывать &quot;Панель управления&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING </strong> <span class="myb">CascadeControlPanel</span>,
+          значение &quot;YES&quot; - раскрывать меню </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="CascadeMyDocuments"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Раскрывать папку &quot;Мои документы&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING </strong> <span class="myb">CascadeMyDocuments</span>,
+          значение &quot;YES&quot; - раскрывать меню </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="CascadeMyPictures"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Раскрывать папку &quot;Мои рисунки&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING </strong> <span class="myb">CascadeMyPictures</span>,
+          значение &quot;YES&quot; - раскрывать меню </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="CascadePrinters"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Раскрывать папку &quot;Принтеры&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING </strong> <span class="myb">CascadePrinters</span>,
+          значение &quot;YES&quot; - раскрывать меню </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="CascadeNetworkConnections"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Раскрывать &quot;Сетевые подключения&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>STRING </strong> <span class="myb">CascadeNetworkConnections</span>,
+          значение &quot;YES&quot; - раскрывать меню</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Задержка выпадения меню *</h2>
+
+<a name="MenuShowDelay"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Задержка выпадения меню *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Влияет на скорость показа меню Пуск и скорость выделения объектов
+          в проводнике, если используется одинарный щелчок. По умолчанию задержка
+          равна 400 миллисекунд. Чтобы изменения вступили в силу, необходимо
+          перезагрузиться.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING</strong> <span class="myb">MenuShowDelay</span>, значение
+          в миллисекундах, например &quot;400&quot;. <span class="myr">Обратите
+          внимание, параметр имеет <strong>строковое</strong> значение, а не <strong>DWORD</strong>.</span></p>
+        <p>Примечание: в Windows 2003 Server значение &quot;0&quot; приводит к высокой
+          нагрузке процессора при обращении к меню. XP Tweaker использует значение
+          &quot;1&quot;
+          вместо &quot;0&quot;.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

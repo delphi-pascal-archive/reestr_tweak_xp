@@ -1,0 +1,88 @@
+	body		{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	background-color: #3a6ea5;
+	color: #FFFFFF;
+}
+	
+/* HYPERLINKS */ 
+	a:link, a:visited	{color: #336699; text-decoration:none;}
+	a:active, a:hover	{color: #3399CC; text-decoration:none;}
+
+/* LISTS */ 
+	ol		{font-size: 100%; margin-top: .5em; margin-bottom: 0em; margin-left: 4em;}
+	ul		{font-size: 100%; margin-top: .5em; margin-bottom: 0em;}
+	ol ul		{list-style: disc; margin-top: .5em;}
+	ul ul		{list-style: disc; margin-top: .5em;}
+	li		{margin-bottom: .7em; margin-left: -2em;}
+
+/* PREFORMATTING - CODE */ 
+	pre		{font-size: 100%; margin-top: 1.2em; margin-bottom: 1.5em;}
+	code	{font-family: "courier new", courier; font-size: 125%; }
+	
+/* TABLES */ 
+	table	{font-size: 100%; margin-top: 1em; margin-bottom: 0em;}
+	th		{text-align: left; background: #CCCCCC; margin: .25em; vertical-align: bottom;}
+	tr		{vertical-align: top;}
+	td		{margin: .25em; vertical-align: top; border-bottom: 1em;}
+	
+    .gui {
+	border: 1px solid #6f90c1;
+	padding: 3px;
+	font:bold 8pt Tahoma, Arial;
+	color:white;
+	background-color: #6f90c1;
+}
+	.nogui {
+	border: 1px solid #6f90c1;
+	padding: 3px;
+	font:8pt Tahoma, Arial;
+	color:black;
+	text-align: justify;
+	background-color: #FFFFFF;
+}
+	.tableblue{ /*Main header*/
+	border: 1px solid white;
+	padding: 3px;
+	font:8pt Tahoma,Arial;
+	color:white;
+	background-color: #6f90c1;
+}
+
+/* Heading styles---------------------------------------------------------------------------- */ 
+
+	h1		{
+	font-size: 150%;
+	margin-top: .4em;
+	margin-bottom: .4em;
+	font-weight: bold;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+	h2		{
+	font-size: 125%;
+	margin-top: 2em;
+	margin-bottom: .5em;
+	font-weight: bold;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+/* PARAGRAPH */
+	p		{margin-top: .6em; margin-bottom: .6em; }
+	
+	/* MY COLORS */
+	.myg {
+	color: #336666;
+}
+	.myb {
+	color: #0066FF;
+}
+	.myr {
+	color: #FF4600;
+}
+	
+/* Defined List styles ----------------------------------------------------------------------- */
+
+	dt		{font-weight: bold; }
+	dd		{margin-left: 2em; margin-bottom: .6em; }
+
+#theIFRAME	{position: absolute; display:none; }

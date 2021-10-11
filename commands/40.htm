@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Настройка соединения</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Настройка соединения</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Максимальный размер передаваемого блока данных (Maximum
+        Transmission Unit)</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Определяет самое большое количество данных, которые могут быть переданы
+          по сети в одном физическом фрейме. Если пакет IP большего размера чем
+          MTU, то произойдет фрагментация, что может увеличить время, которое
+          требуется, чтобы послать единственный пакет.</p>
+        <p> По-умолчанию Windows XP использует значение 1500.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">MTU</span>, значение - размер
+          блока в байтах</p>
+        <p>Рекомендуемые значения:</p>
+        <p>Для модема: 576</p>
+        <p>Для DSL, кабельных модемов, T1 и выше: 1500</p>
+        <p>&nbsp;</p>
+        <p>Полную информацию по настройке протокола TCP/IP для Win2k3 можно получить на сайте Майкрософт</p>
+        <p><a href="http://www.microsoft.com/technet/prodtechnol/windowsserver2003/plan/TCPIP03.asp?frame=true" target="_new">http://www.microsoft.com/technet/prodtechnol/windowsserver2003/plan/TCPIP03.asp?frame=true</a> (english) </p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Максимальный размер окна для приёма TCP пакетов (RWIN)</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Рекомендуется изменять опцию только опытным пользователям. Под NT-системами значение RWIN является динамическим. </p>
+        <p>Количество байт, которые отправитель может передать, не получая
+            подтверждения.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">TCPWindowSize</span>, значение
+          - размер в байтах</p>
+        <p>XP Tweaker расчитывает значение следующим образом:</p>
+        <p>(Размер MTU - 40 байт заголовка TCP/IP) * множитель </p>
+        <p>Множитель может принимать значения от 2 - 10. </p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматически определять MTU</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Автоматически определять максимальный размер передаваемого блока данных.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">EnablePMTUDiscovery</span>,
+          значение 1 - определять MTU автоматически</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Включить поддержку TCP окон больше 64Кб</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Рекомендуется для сетей с большой пропускной способностью.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">Tcp1323Opts</span>, значение
+          1 - поддержка включена</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Максимальное время жизни пакета IP (Time to Live)</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>TTL определяет максимальное время, которое пакет IP может прожить
+          в сети, не достигая адресата. Другими словами: использование этой опции
+          определяет, как долго компьютер будет ждать, прежде чем решит, что
+          запрашиваемый вебсайт не найден. Для плохих соединений имеет смысл
+          увеличить данное значение.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">DefaultTTL</span>, значение
+          - время жизни пакета.</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Выборочная передача поврежденных данных</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данная опция включает поддержку Selective Acknowledgement (SACK).
+          Если пакет или ряд пакетов TCP потеряны, то получатель может сообщить
+          отправителю, какие данные были получены, а какие нет.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">SackOpts</span>, значение
+          1 - поддержка выборочной передачи включена</p>
+      </blockquote></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

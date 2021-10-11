@@ -1,0 +1,390 @@
+<head>
+<title>Другое</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="tableblue"><h1 align="center">XP Tweaker - Загрузка системы</h1></td>
+  </tr>
+</table>	  
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td  class="gui">Содержание</td>
+  </tr>
+  <tr>
+    <td  class="nogui"><blockquote>
+        <p>&nbsp;</p>
+        <p><strong>Вход в систему</strong></p>
+        <p><a href="#lbAutoAdminLogon">Автоматический вход в систему без ввода
+            пароля</a></p>
+        <p><a href="#edtLegalNoticeCaption">Показывать сообщение при входе в
+            систему</a></p>
+        <p><a href="#cbDontDisplayLastUserName">Не показывать имя последнего
+            пользователя</a></p>
+        <p><a href="#cbLogonType">Использовать страницу приветствия</a></p>
+        <p><a href="#cbAllowMultipleTSSessions">Использовать быстрое переключение
+            пользователей</a></p>
+        <p><a href="#cbDisableStatusMessages">Не показывать сообщения при запуске и выходе из системы</a></p>
+        <p><a href="#lb8">Показывать выполняемые команды при запуске и выходе из системы</a></p>
+		<p><a href="#cboxKeyboardLayout">Раскладка клавиатуры при входе в систему</a></p>
+        <p><a href="#cbToggleHotkey">Использовать Ctrl+Shift для переключения раскладки клавиатуры</a></p>
+		<p><a href="#cbInitialKeyboardIndicators">Включать Num Lock при загрузке</a></p>
+		<p>&nbsp;</p>
+        <p><strong>Автозагрузка</strong></p>
+        <p><a href="#AutoRun">Автозагрузка программ через реестр</a></p>
+        <p><a href="#cbDisableLocalMachineRun">Запретить автозапуск программ
+            Local Machine Run</a></p>
+        <p><a href="#cbDisableLocalMachineRunOnce">Запретить автозапуск программ
+            Local Machine Run Once</a></p>
+        <p><a href="#cbDisableCurrentUserRun">Запретить автозапуск программ Current
+            User Run</a></p>
+        <p><a href="#cbDisableCurrentUserRunOnce">Запретить автозапуск программ Current User Run Once</a></p>
+        <p>&nbsp;</p>
+        <p><strong>Проверка диска</strong></p>
+		 <p><a href="#udedtAutoChkTimeOut">Изменить интервал запуска программы проверки диска (Scandisk)</a></p>
+        <p>&nbsp;</p>
+    </blockquote>
+    </td>
+  </tr>
+</table>
+
+<h2>Вход в систему</h2>
+
+<a name="lbAutoAdminLogon"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматический вход в систему без ввода пароля</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Позволяет автоматически входить в систему без выбора
+              имени и ввода пароля. Также автоматический вход в систему можно
+          включить следующим способом: Пуск - Выполнить - набрать &quot;control
+          userpasswords2&quot;,
+              в появившемся окне снять галочку с &quot;Требовать ввод имени и
+              пароля&quot;,
+              после нажатия на ОК появится окно, где нужно указать пользователя
+              и пароль. Если автоматический вход включен, то его можно обойти,
+              удерживая клавишу SHIFT при загрузке компьютера.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p><strong>STRING</strong> <span class="myb">AutoAdminLogon</span>, принимает
+              значение &quot;1&quot; - Автоматический вход включен, &quot;0&quot; -
+              выключен. <span class="myr">Обратите внимание, параметр имеет <strong>строковое</strong> значение,
+              а не <strong>DWORD</strong>.</span></p>
+        <p><strong>STRING</strong> <span class="myb">DefaultUserName</span>,
+              имя пользователя, которое используется при автоматическом входе в систему<br>
+              <strong>STRING</strong> <span class="myb">DefaultPassword</span>,
+            пароль пользователя<br>
+            <strong>STRING</strong> <span class="myb">DefaultDomainName</span>,
+            домен по умолчанию, используется для компьютеров в сети
+            <br>            
+            <strong>STRING</strong> <span class="myb">ForceAutoLogon</span>,
+            включение принудительного автологина</p>
+        <p>Примечание: пароль храниться в реестре в незашифрованном виде.</p>
+        <p>При отключении автоматического входа в систему, XP Tweaker <span class="myr">удаляет</span> пароль
+                из реестра.</p>
+        <p>Если опция сбрасывается после перезагрузки, создайте пароль для своей
+          учетной записи (Панель управления - Учетные записи пользователей) или
+          используйте апплет control
+          userpasswords2 (см. выше)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="edtLegalNoticeCaption"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Показывать сообщение при входе в систему</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Показывает сообщение перед вводом пароля для входа
+              в систему. Чтобы войти в систему необходимо нажать на кнопку OK.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p><strong>STRING</strong> <span class="myb">LegalNoticeCaption</span>,
+              заголовок окна<br>
+                <strong>STRING</strong> <span class="myb">LegalNoticeText</span>,
+                текст сообщения</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbDontDisplayLastUserName"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Не показывать имя последнего пользователя</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Windows XP по умолчанию подставляет имя последнего пользователя использующего
+          компьютер. Чтобы это отменить, используйте данную опцию.</p>
+        <p class="myg">HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System</p>
+        <p><strong>DWORD</strong> <span class="myb">DontDisplayLastUserName</span>,              значение
+          1 - убрать имя пользователя</p>
+        <p align="right"><a href="#Top">Наверх</a><br>
+          </p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbLogonType"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать страницу приветствия</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Экран приветствия обеспечивает наиболее быстрый и простой вход в систему.
+          Если опция выключена, используется классический вход в систему (более
+          безопасно).</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p><strong>DWORD</strong> <span class="myb">LogonType</span>,       
+           значение 1 - используется страница приветствия, 0 - используется классический
+          вход в систему</p>
+        <p>Примечание: опция не доступна для <strong>Windows Server 2003</strong> (страница приветствия
+          не используется)</p>
+        <p align="right"><a href="#Top">Наверх</a><br>
+          </p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbAllowMultipleTSSessions"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Использовать быстрое переключение пользователей</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>Если опция включена, то при переключении на другого пользователя,
+          программы текущего пользователя будут продолжать работать. Иначе, программы
+          будут автоматически выключатся, когда пользователь выходит из системы,
+          и со следующим пользователем
+          компьютер будет работать быстрее. </p>
+        <p></p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p><strong>DWORD</strong> <span class="myb">AllowMultipleTSSessions</span>,
+          значение 1 - использовать быстрое переключение пользователей</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>      
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbDisableStatusMessages"></a>Не показывать сообщения
+      при запуске и выходе из системы</td>
+  </tr>
+  <tr>
+    <td  class="nogui"><blockquote>
+        <p>Убирает сообщения при запуске и выходе из системы (сохранение параметров,
+          загрузка личных параметров, запуск Windows и т.д.)</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</p>
+        <p><strong>DWORD</strong> <span class="myb">DisableStatusMessages</span>,
+          значение 1 - Убрать сообщения</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="lb8"></a>Показывать выполняемые команды при запуске и выходе из системы</td>
+  </tr>
+  <tr>
+    <td  class="nogui"><blockquote>
+        <p>Показывает информацию о выполняемых процессах во время загрузки системы.
+          Поможет быстро выяснить, на запуск чего система тратит много времени
+          и если возможно, отключить не нужные сервисы.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</p>
+        <p><strong>DWORD</strong> <span class="myb">verbosestatus</span>, значение
+          1 - показывать, 0 - стандартная загрузка</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cboxKeyboardLayout"></a>Раскладка клавиатуры при входе в систему</td>
+  </tr>
+  <tr>
+    <td  class="nogui"><blockquote>
+        <p>Windows XP дает возможность задать раскладку клавиатуры &quot;по умолчанию&quot; только при установке системы. С помощью данной опции можно изменить раскладку клавиатуры. XP Tweaker поддерживает до трех раскладок клавиатуры. </p>
+        <p class="myg">HKU\.DEFAULT\Keyboard Layout\Preload</p>
+        <p><strong>STRING</strong> <span class="myb">&quot;1&quot;</span> - первая раскладка, <span class="myb">&quot;2&quot;</span> - вторая раскладка и т.д.</p>
+        <p>например:</p>
+        <p><strong>STRING</strong> <span class="myb">&quot;1&quot;</span> = &quot;00000409&quot; - английская раскладка клавиатуры (она будет использоваться по умолчанию) </p>
+        <p><strong>STRING</strong> <span class="myb">&quot;2&quot;</span> = &quot;00000419&quot; - русская раскладка клавиатуры</p>
+        <p><strong>STRING</strong> <span class="myb">&quot;3&quot;</span> = &quot;00000422&quot; - украинская раскладка клавиатуры</p>
+        <p>Примечание: чтобы запретить переключение на другие раскладки, удалите все значения кроме &quot;1&quot;. При удалении всех значений используется английский язык (тестировалось на Win XP Pro rus) </p>
+        <p>P.S. Опция применяет раскладку пользователю при входе в систему (т.н. default user). После входа в систему раскладкой по умолчанию стает раскладка, заданная пользователем в Панели управления. </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+    </blockquote></td>
+  </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbToggleHotkey"></a>Использовать Ctrl+Shift для переключения раскладки клавиатуры</td>
+  </tr>
+  <tr>
+    <td  class="nogui"><blockquote>
+        <p>Windows XP дает возможность задать клавиши для переключения раскладки клавиатуры &quot;по умолчанию&quot; только при установке системы. С помощью данной опции можно изменить клавиши переключения раскладки.</p>
+        <p class="myg">HKU\.DEFAULT\Keyboard Layout\Toggle</p>
+        <p><strong>STRING</strong> <span class="myb">Hotkey</span> - значение &quot;1&quot; - используется комбинация клавиш Alt+Shift (по умолчанию), &quot;2&quot; - используются клавиши Ctrl+Shift </p>
+        <p>P.S. Опция задает клавиши переключения раскладки пользователю при входе в систему (т.н. default user). После входа в систему клавиши переключения задаются пользователем в Панели управления. </p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+    </blockquote></td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbInitialKeyboardIndicators"></a>Включать Num Lock при загрузке</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Определяет состояние кнопки Num Lock при вводе логина и пароля. Windows XP отключает Num Lock в любом случае, даже если в BIOS состояние Num Lock находится в положении включено.</p>
+        <p class="myg"> HKEY_USERS\.DEFAULT\Control Panel\Keyboard</p>
+        <p><strong>DWORD</strong> <span class="myb">InitialKeyboardIndicators</span>, значение 2 - Num Lock включен, значение 0 - выключен</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+    </blockquote></td>
+  </tr>
+</table>
+<h2>Автозагрузка</h2>
+
+<a name="AutoRun"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автозагрузка программ через реестр</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>В этом разделе, вы можете удалить из реестра информацию
+              об автоматически загружаемых программах при старте системы.</p>
+        <p>Список автоматически загружаемых программ разделен на два раздела:<br>
+      программы, запускаемые только для текущего пользователя</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Run</p>
+        <p>и программы, запускаемые для всех пользователей</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</p>
+        <p>Примечание: внизу списка автозагружаемых программ есть ссылка, в которой
+              указан полный путь к программе. Щелкнув по ней, вы откроете папку,
+              в которой находится эта программа.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>    
+
+<a name="cbDisableLocalMachineRun"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить автозапуск программ Local Machine Run</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Программы, запускаемые для всех пользователей компьютера.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">DisableLocalMachineRun</span>, значение 1 отключает
+          автозапуск программ</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbDisableLocalMachineRunOnce"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить автозапуск программ Local Machine Run Once</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Программы, запускаемые для всех пользователей компьютера один раз.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">DisableLocalMachineRunOnce</span>, значение 1 отключает
+          автозапуск программ</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbDisableCurrentUserRun"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить автозапуск программ Current User Run</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Программы, запускаемые для текущего пользователя компьютера.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">DisableCurrentUserRun</span>, значение 1 отключает
+          автозапуск программ</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbDisableCurrentUserRunOnce"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить автозапуск программ Current User Run Once</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Программы, запускаемые для текущего пользователя компьютера один раз.</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">DisableCurrentUserRunOnce</span>, значение 1 отключает
+          автозапуск программ</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Проверка диска</h2>
+<p><a name="udedtAutoChkTimeOut"></a></p>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Изменить интервал запуска программы проверки диска (Scandisk)</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>С помощью данной опции можно изменить интервал перед запуском программы
+          проверки диска при неправильном завершении работы системы. По умолчанию
+          значение в реестре отсутствует и WinXP в этом случае использует интервал
+          равный 10 секундам. Значение равное 0, не дает пользователю отменить
+          запуск Scandisk'a при неправильном завершении работы.</p>
+        <p>Также данное значение можно изменить, используя программу chkntfs
+          (не смотря на название, она также годиться и для FAT32)</p>
+        <p>chkntfs /t:n, где n - интервал в секундах.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Control\Session
+          Manager </p>
+        <p><strong>DWORD </strong><span class="myb">AutoChkTimeOut</span>,
+          значение - интервал задержки в секундах</p>
+        <p>Чтобы отключить Scandisk, необходимо изменить следующий параметр:</p>
+        <p><strong>MULTI STRING</strong> <span class="myb">BootExecute</span>, присвоив ему значение &quot;&quot;, чтобы восстановить
+          Scandisk установите значение &quot;autocheck autochk *&quot;</p>
+        <p>Примечание: Scandisk запускаемый под Windows исправляет не все ошибки
+          на загрузочном томе (а точнее на томах которые не может заблокировать),
+          поэтому не стоит его отключать. Если Scandisk отключен, но требуется
+          полная проверка диска (с отключением тома), то наберите в командной
+          строке следующее: &quot;chkdsk c: /x&quot; программа не может заблокировать
+          текущий диск, и спросит, нужно ли его проверить при следующей загрузке
+          компьютера (вместо с: подставьте необходимый диск).</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<html>
+<head>
+<title>Internet Explorer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Internet Explorer</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматически подгонять размеры рисунка</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Internet Explorer автоматически подгоняет рисунки так, чтобы они полностью
+          умещались на экране и полосы прокрутки не появлялись. При необходимости
+          можно отключить данную возможность.</p>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>STRING</strong> <span class="myb">Enable AutoImageResize</span>,
+          значение &quot;yes&quot; - автоматическое изменение размера изображений
+          включено</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить автоматические обновления IE</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>DWORD</strong> <span class="myb">NoUpdateCheck</span>, значение
+          1 - запрещает автоматические обновления</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Скрывать редко используемые пункты в Избранном</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>В меню показываются только часто вызываемые пункты меню, для доступа
+          к редко вызываемым пунктам, необходимо нажать на специальную стрелочку.
+          Чтобы изменения вступили в силу, необходимо перезапустить Internet
+          Explorer</p>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>STRING</strong> <span class="myb">FavIntelliMenus</span>,
+          значение &quot;yes&quot; - скрывать редко используемые пункты</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Удалить пароль на ограничение доступа к сайтам</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Удаляет пароль на ограничение доступа к сайтам по содержанию. Данный
+          пароль можно установить в Свойствах обозревателя, вкладка Содержание,
+          раздел Ограничение доступа.</p>
+        <p class="myg">HKLM\Software\Microsoft\Windows\CurrentVersion\policies\Ratings</p>
+        <p><strong>BINARY</strong> <span class="myb">Key</span>, значение - зашифрованный
+          пароль и параметры ограничения. Удалите параметр, если хотите удалить
+          пароль</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Не выводить окно &quot;Подключение удаленного доступа&quot; при
+      автономной работе </td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Internet Explorer при автономной работе выводит окно &quot;Подключение
+          удаленного доступа&quot; если информация не доступна локально. В большинстве
+          случаев это не важная информация (рекламные баннеры) и подключаться
+          к Интернету нет необходимости. На больших страницах Internet Explorer
+          может выдать окно несколько раз, прежде чем полностью отобразит информацию.
+          С помощью данной опции можно запретить IE выводить окно подключения.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Internet
+          Settings</p>
+        <p><strong>DWORD</strong> <span class="myb">EnableAutodial</span>, значение
+           1 - разрешить вывод окна, 0 - запретить</p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Открывать ярлыки в новом окне IE</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Internet Explorer при открытии ссылки заменяет содержимое последнего
+          открытого окна, с помощью данной опции можно настроить IE так, чтобы
+          ярлыки открывались в новом окне. (Требуется перезапуск Internet Explorer).</p>
+        <p class="myg">HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>DWORD</strong> <span class="myb">AllowWindowReuse</span>,
+          значение 1 - открывать в последнем открытом окне, 0 - открывать в новом
+          окне</p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Запретить фоновые звуки</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Опция запрещает Internet Explorer проигрывать фоновые звуки на web-страницах.</p>
+        <p class="myg">HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>STRING</strong> <span class="myb">Play_Background_Sounds</span>,
+          значение &quot;yes&quot; - разрешить проигрывать фоновые звуки, &quot;no&quot; - запретить</p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Путь к папке закачек по умолчанию</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данная папка будет всегда появляться первой для сохранения загружаемых
+          файлов.</p>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer</p>
+        <p><strong>STRING</strong> <span class="myb">Download Directory</span>,
+          значение путь к папке закачек</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Редактор для просмотра исходного кода HTML страниц</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Редактор, вызываемый через пункт меню Вид -&gt; Просмотр HTML- кода.</p>
+        <p align="left" class="myg">HKLM\SOFTWARE\Microsoft\Internet Explorer\View
+          Source Editor\Editor Name</p>
+        <p><strong>STRING</strong> <span class="myb">по умолчанию</span> путь
+          к редактору.</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Поиск из панели адресов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Параметр влияет на поведение Internet Explorer, если он не находит
+          страницу.</p>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>DWORD</strong> <span class="myb">AutoSearch</span>, Internet
+          Explorer 6.0 использует следующие значения:</p>
+        <p>0 - Не выполнять поиск из адресной строки<br>
+          6 - Показать результаты и перейти на самый похожий узел<br>
+          5 - Только перейти на самый похожий узел<br>
+          4 - Только показать результаты в главном окне</p>
+        </blockquote></td>
+    </tr>
+</table>
+
+<h2>Использовать автозаполнение для</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Веб-адресов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Включить/выключить автозаполнение в строке адреса.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete</p>
+        <p><strong>STRING</strong> <span class="myb">AutoSuggest</span>, значение &quot;yes&quot; -
+          автозаполнение веб-адресов используется</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автозаполнение форм</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Включить/отключить автозаполнение форм. Internet Explorer выводит
+          подсказки, в которых можно выбрать ранее введенные данные.</p>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>STRING</strong> <span class="myb">Use FormSuggest</span>,
+          значение &quot;yes&quot; - автозаполнение форм используется</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автозаполнение имен пользователей и паролей в формах</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>STRING</strong> <span class="myb">FormSuggest Passwords</span>,
+          значение &quot;yes&quot; - автозаполнение имен пользователей и паролей
+          в формах используется</p>
+        <p>&nbsp;</p>
+        </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запрос на сохранение пароля</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Internet Explorer\Main</p>
+        <p><strong>STRING</strong> <span class="myb">FormSuggest PW Ask</span>,
+          значение &quot;yes&quot; - Internet Explorer выводит окно с сообщением
+          сохранять пароль или нет</p>
+        <p>&nbsp;</p>
+        </blockquote></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

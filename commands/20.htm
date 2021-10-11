@@ -1,0 +1,171 @@
+<html>
+<head>
+<title>Система</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Защита системы</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить вызов диспетчера задач</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System</p>
+        <p><strong>DWORD</strong> <span class="myb">DisableTaskMgr</span>, значение
+          1 - запрещает вызов диспетчера задач</p>
+        </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить редактирование реестра</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данная опция не запрещает полностью редактирование реестра, а только
+          не дает запустить regedit.exe, другие программы редактирующие реестр
+          игнорируют этот параметр. Вы можете запретить редактирование реестра,
+          выставив права определенным пользователю или группам пользователей.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System</p>
+        <p><strong>DWORD</strong> <span class="myb">DisableRegistryTools</span>,
+          значение 1 - запрещает вызов редактора реестра</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить завершения сеанса *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает завершение сеанса (logout). Необходимо перезагрузить компьютер,
+          чтобы изменения вступили в силу.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoLogOff</span>, значение
+          1 - запрещает завершение сеанса</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить завершение работы и убрать кнопку из меню Пуск
+        *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает завершение работы компьютера(logoff) стандартными методами,
+          специальные программы при этом могут завершать работу системы. Кнопка
+          из меню пуск уберется/появится только после перезагрузки.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoClose</span>, значение
+          1 - запрещает завершение работы компьютера</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить запуск апплетов в Панели управления</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает запуск всех апплетов в Панели управления. Также запрещает
+          вызов апплетов из Windows и запуск *.cpl файлов.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoControlPanel</span>, значение
+          1 - запрещает запуск апплетов в Панели управления</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить изменение свойств Экрана</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает запуск апплета настройки экрана (настройка тем, обоев, разрешения
+          экрана и др.)</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoDispCPL</span>, значение
+          1 - запрещает изменение свойств экрана</p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Командная строка</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Policies\Microsoft\Windows\System</p>
+        <p> <strong>DWORD</strong> <span class="myb">DisableCMD</span>, значения:</p>
+        <p> 0 - Разрешить использование командной строки<br>
+            1 - Запретить использование командной строки<br>
+            2 - Разрешить только запуск командных файлов</p>
+    </blockquote>
+    </td>
+  </tr>
+</table>
+<h2>Сетевая безопасность</h2>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Полностью отключить общие ресурсы (ADMIN$, C$ и т.д.) *</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Эти ресурсы доступны Администратору, для отключения/включения требуется
+          перезагрузка. Windows XP позволяет отключить эти ресурсы, но только
+          до перезагрузки.</p>
+        <p class="myg">HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters</p>
+        <p><strong>DWORD</strong> <span class="myb">AutoShareWks</span>, значение
+          0 - общие ресурсы отключены, 1 - включены</p>
+        <p>Примечание: данное изменение реестра не отключит IPC$, чтобы его отключить
+          наберите в командной строке:</p>
+        <p>net share ipc$ /delete </p>
+        <p>(работает только до перезагрузки)</p>
+        <p>Примечание: в<strong>Windows Server 2003</strong> используется другой
+          параметр:</p>
+        <p><strong>DWORD</strong> <span class="myb">AutoShareServer</span>, значение
+          0 - общие ресурсы отключены, 1 - включены</p>
+    </blockquote>
+    </td>
+  </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui">Запретить анонимным пользователям просматривать ресурсы</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Запрещает анонимным пользователям просматривать учетные записи и расшаренные
+          ресурсы.</p>
+        <p class="myg">HKLM\System\CurrentControlSet\Control\Lsa</p>
+        <p><strong>DWORD</strong> <span class="myb">RestrictAnonymous</span>,
+          значение  1 - запретить, 0 - разрешить</p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

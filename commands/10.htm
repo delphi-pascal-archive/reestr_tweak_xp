@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Windows Media Player</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Windows Media Player</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Включить MP3 кодирование</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Включение встроенного кодека для копирования музыки с компакт диска
+          в формате *.mp3 (MPEG-1 Layer 3)</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding</p>
+        <p>Максимальный битрейт:<br>
+            <strong>DWORD</strong> <span class="myb">HighRate</span>, XP Tweaker
+            выставляет значение 192000, что равно 192 Кбит, хотя, скорее всего
+            вам удастся кодировать с максимальным битрейтом 128 Кбит.</p>
+        <p>Минимальный битрейт:<br>
+            <strong>DWORD</strong> <span class="myb">LowRate</span>, XP Tweaker
+            выставляет значение 56000, что равно 56 Кбит</p>
+        <p>Средний-высокий битрейт<br>
+            <strong>DWORD</strong> <span class="myb">MediumHighRate</span>, XP
+            Tweaker выставляет значение 128000, что равно 128 Кбит - оптимальное
+            значение</p>
+        <p>Средний битрейт<br>
+            <strong>DWORD</strong> <span class="myb">MediumRate</span>, XP Tweaker
+            выставляет значение 64000, что равно 64 Кбит</p>
+        <p align="left">Если опция выключена, XPTweaker удаляет ключ <span class="myg">HKLM\SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding</span> полностью,
+          при загрузке проверяется, существует ли данный ключ, если да, то опция
+          включена.</p>
+        <p align="left">Примечание: Если в Windows XP установлен <strong>Service Pack 1</strong>, то необходимо установить внешний кодек. </p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматически загружать кодеки из Интернета</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Если на компьютере нет необходимого видео или аудио кодека, то Windows
+          Media Player попытается найти его в Интернете и затем загрузить его.
+          Если опция выключена, Media Player сначала спросит, загрузить кодек
+          или нет, а если включена, кодек будет загружен и установлен без выдачи
+          сообщения.</p>
+        <p class="myg">HKCU\SOFTWARE\Microsoft\MediaPlayer\Preferences</p>
+        <p><strong>DWORD</strong> <span class="myb">UpgradeCodecPrompt</span>,
+          значение 1 - выдавать сообщение перед загрузкой кодека, 0 - загружать
+          автоматически</p>
+        <p>Примечание: WMP8 использует однобайтовый двоичный тип данных (hex:00
+          или hex:01), но вполне корректно работает с dword. </p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматические обновления</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+          <p class="myg">HKCU\SOFTWARE\Microsoft\MediaPlayer\Preferences</p>
+          <p><strong>DWORD</strong> <span class="myb">UpgradeCheckFrequency</span>,
+            может принимать следующие значения:</p>
+          <ul>
+            <ul>
+              <li>0 - Один раз день</li>
+              <li>1 - Один раз в неделю</li>
+              <li>2 - Один раз в месяц</li>
+            </ul>
+          </ul>
+		 <p>Примечание: WMP8 использует двоичный тип данных, но вполне корректно
+          работает с dword. (соответственно hex:00,00,00,00, hex:01,00,00,00,
+		   hex:02,00,00,00)</p>
+        </blockquote></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

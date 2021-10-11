@@ -1,0 +1,466 @@
+<html>
+<head>
+<title>Проводник</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="tableblue"><h1 align="center">XP Tweaker - Проводник</h1></td>
+  </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>        
+        <p><strong>Проводник</strong>        
+        <p><a href="#cbNoLowDiskSpaceChecks">Отключить сообщение о недостатке свободного места на диске</a></p>
+		<p><a href="#cbMinAnimate">Анимация при сворачивании и разворачивании окон *</a></p>
+		<p><a href="#cbSeparateProcess">Запускать окна Проводника в отдельном процессе</a></p>
+		<p><a href="#cbAutoRestartShell">Автоматически перезапускать Проводник при ошибках</a></p>
+		<p><a href="#cbIsShortcut">Удалить стрелки у ярлыков</a></p>
+		<p><a href="#cblink">Не добавлять "Ярлык для..." для создаваемых ярлыков</a></p>
+		<p><a href="#cbNoSaveSettings">Отключить автозапись состояния окон проводника *</a></p>
+		<p><a href="#cbShowAllDocumentsInMyComputer">Не показывать папки документов в "Моем компьютере"</a></p>
+		<p><a href="#cbDragFullWindows">Отображать содержимое окна при перетаскивании *</a></p>
+		<p><a href="#cbDisableThumbnailCache">Запретить кэширование изображений (thumbnails)</a></p>
+		<p><a href="#cboxFontSmoothingType">Сглаживать неровности экранных шрифтов</a></p>
+		<p><a href="#tbCursorBlinkRate">Частота мерцания курсора</a></p>
+		<p><a href="#cbEditorUnknownFiles">Использовать свой редактор для открытия файлов неизвестного типа</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Контекстное меню проводника</strong></p>
+		<p><a href="#cbCopyTo">Добавить пункт меню "Копировать в папку..."</a></p>
+		<p><a href="#cbMoveTo">Добавить пункт меню "Переместить в папку..."</a></p>
+		<p><a href="#cbSendTo">Пункт меню "Отправить"</a></p>
+		<p><a href="#cboxDirectoryShell">Удалить пункт из контекстного меню папок</a></p>
+		<p><a href="#lbAddMenuFolder">Добавить новый пункт в контекстное меню папок</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Диалоговое окно открытия и сохранения файла</strong></p>
+		<p><a href="#cbPlacesBar">Изменить диалоговое окно</a></p>
+		<p><a href="#cbStandardPlaces">Изменить диалоговое окно в Microsoft Office 2000/XP/2003</a></p>
+		<p>&nbsp;</p>
+      </blockquote></td>
+    </tr>
+</table>  
+
+<a name="cbNoLowDiskSpaceChecks"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Отключить сообщение о недостатке свободного места на диске</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Не выдавать сообщение о недостатке места на диске.
+              Имеет смысл использовать данную опцию на дисках малого размера.</p>
+        <p class="myg"> HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">NoLowDiskSpaceChecks</span>,
+              значение 1 - сообщение отключено, 0 - включено</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbMinAnimate"></a>Анимация при сворачивании и разворачивании окон *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>На медленном компьютере рекомендуется отключить данную
+              опцию. Изменения вступят в силу только после перезагрузки.</p>
+        <p class="myg">HKCU\Control Panel\Desktop\WindowMetrics</p>
+        <p><strong>STRING</strong> <span class="myb">MinAnimate</span>, &quot;1&quot; -
+          анимация включена, &quot;0&quot; - выключена. <span class="myr">Обратите
+          внимание, параметр имеет <strong>строковое</strong> значение, а не <strong>DWORD</strong>.</span></p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbSeparateProcess"></a>Запускать окна Проводника в отдельном процессе</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Включение данной опции позволяет запускать окна Проводника
+              в разных процессах, это увеличит стабильность системы, но требует больше
+              памяти.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p> <strong>DWORD</strong> <span class="myb">SeparateProcess</span>,
+              1 - окна проводника запускаются в различных процессах, 0 - используется
+              один процесс</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbAutoRestartShell"></a>Автоматически перезапускать Проводник при ошибках</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Очень удобная опция. При крахе Проводник будет сам
+              перезапускаться и не надо вызывать диспетчер задач, чтобы его запустить.</p>
+        <p class="myg">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon</p>
+        <p><strong>DWORD</strong> <span class="myb">AutoRestartShell</span>,
+              1 - Проводник автоматически перезапускается, 0 - не перезапускается</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbIsShortcut"></a>Удалить стрелки у ярлыков</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Удаляет стрелки в левом нижнем углу у ярлыков.</p>
+        <p><span class="myg">HKLM\SOFTWARE\Classes\lnkfile</span> -
+              ярлыки Windows XP<br>
+                <span class="myg">HKLM\SOFTWARE\Classes\piffile</span> -
+                ярлыки DOS программ</p>
+        <p><strong>STRING</strong> <span class="myb">IsShortcut</span>, значение &quot;1&quot; -
+              На ярлыке присутствуют стрелки, удаление этого параметра - отключает
+              стрелки на ярлыках</p>
+        <p> Примечание: XP Tweaker читает только одно значение<span class="myg"> HKLM\SOFTWARE\Classes\lnkfile\IsShortcut</span>,
+              и если оно существует, делает вывод, что опция отключена. Запись производится
+              в оба параметра.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cblink"></a>Не добавлять &quot;Ярлык для...&quot; для создаваемых ярлыков</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer</p>
+        <p><strong>BINARY</strong> <span class="myb">link</span>, значение hex:00,00,
+              00,00 - не добавлять</p>
+        <p>Примечание: после включения опции не следует создавать ярлыки до перезагрузки
+          компьютера, т.к. Windows изменит значение параметра.</p>
+        <p>Примечание: в Windows Server 2003 этот параметр по умолчанию включен.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+      </td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbNoSaveSettings"></a>Отключить автозапись состояния окон проводника *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Отключает запись положения и размеров окон проводника.
+              Чтобы изменения вступили в силу необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>BINARY</strong> <span class="myb">NoSaveSettings</span>, значение
+              hex: 01,00,00,00 - отключить автозапись, удаление значения - включает
+              автозапись</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbShowAllDocumentsInMyComputer"></a>Не показывать папки документов в &quot;Моем компьютере&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Не показывать папки &quot;Мои документы&quot;, &quot;Общие
+              документы&quot; и т.д. Для удаления папок из &quot;Моего компьютера&quot; необходимо
+              удалить ключ:</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\
+          NameSpace\DelegateFolders\{59031a47-3f72-44a7-89c5-5595fe6b30ee}</p>
+        <p>Чтобы вернуть папки на место, создайте этот ключ заново.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbDragFullWindows"></a>Отображать содержимое окна при перетаскивании *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Если данная опция отключена, то вместо самого окна
+              передвигается только его контур. Отключите эту опцию, если это очень
+              загружает систему. Чтобы изменения вступили в силу необходимо перезагрузиться.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING</strong> <span class="myb">DragFullWindows</span>,
+              значение &quot;1&quot; - отображать содержимое, &quot;0&quot; -
+              отображать только контур. <span class="myr">Обратите внимание, параметр имеет <strong>строковое</strong> значение,
+              а не <strong>DWORD</strong>.</span></p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="gui"><a name="cbDisableThumbnailCache"></a>Запретить кэширование изображений (thumbnails)</td>
+  </tr>
+  <tr>
+    <td class="nogui"><blockquote>
+        <p>Windows XP создает скрытые файлы Thumbs.db, для последующего быстрого
+          вывода изображений, с помощью данной опции можно отключить эту возможность.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">DisableThumbnailCache</span>,
+          значение 1 - отключить кэширование, 0 - включить</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cboxFontSmoothingType"></a>Сглаживать неровности экранных шрифтов</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Улучшает отображение шрифтов на мониторе компьютера.
+              Сглаживание Clear Type в основном используется для ЖК-дисплеев, т.к.
+              на обыкновенных мониторах он будет смотреться размыто.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING</strong> <span class="myb">FontSmoothing</span>,
+          &quot;2&quot; - использовать сглаживание шрифтов, &quot;0&quot; - не использовать <br>
+              <strong>DWORD</strong> <span class="myb">FontSmoothingType</span>, может
+          принимать следующие значения:</p>
+		  <ul>
+              <ul>
+                <li>0 - Не использовать сглаживание</li>
+                <li>1 - Стандартное сглаживание</li>
+                <li>2 - Сглаживание Clear Type</li>
+              </ul>
+		  </ul>
+		<p align="right"><a href="#Top">Наверх</a></p>
+		 </blockquote> 
+	  </td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="tbCursorBlinkRate"></a>Частота мерцания курсора</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Частота мерцания курсора при вводе текста. Также эту
+              возможность можно настроить в Панели управления-&gt;Клавиатура</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>STRING</strong> <span class="myb">CursorBlinkRate</span>,
+              чем больше число, тем больше промежуток между мерцанием курсора,
+          значение &quot;-1&quot; -
+              курсор не мерцает. XP Tweaker разрешает выставить значения в диапазоне
+              от 200 до 1200, если значение больше, то выставляется значение &quot;-1&quot;. <span class="myr">Обратите
+              внимание, параметр имеет <strong>строковое</strong> значение, а не <strong>DWORD</strong>.</span> По
+              умолчанию Windows XP использует значение 530.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbEditorUnknownFiles"></a>Использовать свой редактор для открытия файлов неизвестного
+        типа</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Открытие не зарегистрированных типов файлов с помощью
+              своей программы. Используйте префикс &quot;%1&quot; для подстановки
+              имени файла. (XP Tweaker автоматически подставляет префикс, если
+              его не находит)</p>
+        <p class="myg">HKLM\SOFTWARE\Classes\Unknown\shell\%open%\command</p>
+        <p>значение <span class="myb">по умолчанию</span> - путь к файлу, например,
+              D:\Мои документы\CBuilder\Notepad\Notepad.exe %1</p>
+        <p class="myg">SOFTWARE\Classes\Unknown\shell</p>
+        <p>значение <span class="myb">по умолчанию</span> - %open%</p>
+        <p>%open% - любое имя, XP Tweaker использует значение &quot;open&quot;</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Контекстное меню проводника</h2>
+  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbCopyTo"></a>Добавить пункт меню &quot;Копировать в папку...&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>С помощью данного меню можно быстро скопировать папку
+              или файл в любое место.</p>
+        <p class="myg">HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\Copy
+              To</p>
+        <p>Для появления пункта меню, необходимо указать параметр <span class="myb">по
+                умолчанию</span> {C2FBB630-2971-11D1-A18C-00C04FD75D13}, чтобы удалить
+                пункт меню, удалите ключ.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbMoveTo"></a>Добавить пункт меню &quot;Переместить в папку...&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>С помощью данного меню можно быстро переместить папку
+              или файл в любое место.</p>
+        <p class="myg">HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\Move
+              To</p>
+        <p>Для появления пункта меню, необходимо указать параметр <span class="myb">по
+                умолчанию</span> {C2FBB631-2971-11D1-A18C-00C04FD75D13}, чтобы удалить
+                пункт меню, удалите ключ.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbSendTo"></a>Пункт меню &quot;Отправить&quot;</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Позволяет быстро отправлять объекты проводника различным
+              приложениям, например, почтовому клиенту или редактору текстовых файлов.</p>
+        <p class="myg">HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\Send
+              To</p>
+        <p>Для появления пункта меню, необходимо указать параметр <span class="myb">по
+                умолчанию</span> {7BA4C740-9E81-11CF-99D3-00AA004AE837}, чтобы удалить
+                пункт меню, удалите ключ.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cboxDirectoryShell"></a>Удалить пункт из контекстного меню папок</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Некоторые приложения без вашего желания добавляют
+              свои пункты в контекстное меню папок, что делает меню большим и не
+              удобными. С помощью XP Tweaker вы можете удалить некоторые из пунктов.</p>
+        <p><span class="myg">HKLM\SOFTWARE\Classes\Directory\shell</span> -
+              в данном разделе храниться информация о контекстном меню папок.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="lbAddMenuFolder"></a>Добавить новый пункт в контекстное меню папок</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Добавляет новый пункт в контекстное меню папок.</p>
+        <p class="myg">HKLM\SOFTWARE\Classes\Directory\shell</p>
+        <p>В этом разделе необходимо создать новый ключ, например:</p>
+        <p class="myg">HKLM\SOFTWARE\Classes\Directory\shell\Far
+              Manager</p>
+        <p> В значении <span class="myb">по умолчанию</span> укажите название
+              программы, например &quot;Far manager&quot;, далее необходимо создать
+              подключ с названием &quot;command&quot;, например:</p>
+        <p class="myg">HKLM\SOFTWARE\Classes\Directory\shell\Far
+              Manager\command</p>
+        <p>В значении <span class="myb">по умолчанию</span> укажите путь к файлу
+              с параметрами при необходимости, например:</p>
+        <p>c:\program files\far\far.exe %1</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Диалоговое окно открытия и сохранения файла</h2>
+  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbPlacesBar"></a>Изменить диалоговое окно</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Изменение кнопок быстрого доступа к файлам. Максимум кнопок может
+          быть 5.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\comdlg32\PlacesBar</p>
+        <p><strong>DWORD</strong> или <strong>STRING</strong> <span class="myb">Place0</span><br>
+          <strong>DWORD</strong> или <strong>STRING</strong> <span class="myb">Place1</span><br>
+          <strong>DWORD</strong> или <strong>STRING</strong> <span class="myb">Place2</span><br>
+          <strong>DWORD</strong> или <strong>STRING</strong> <span class="myb">Place3</span><br>
+          <strong>DWORD</strong> или <strong>STRING</strong> <span class="myb">Place4</span>          </p>
+        <p>Если параметр имеет значение типа <strong>STRING</strong>, то в нем хранится путь к
+          папке, а если DWORD, то Windows XP сама выбирает папку в зависимости
+          от значения параметра. XP Tweaker поддерживает следующие значения:</p>
+        <blockquote>
+          <p>0 - Рабочий стол<br>
+              5 - Мои документы          <br>
+              6 - Избранное<br>
+              8 - Недавние документы          <br>
+                13 - Моя музыка<br>
+                14 - Мои видеозаписи<br>
+                17 - Мой компьютер            <br>
+                18 - Сетевое окружение<br>
+                36 - Windows<br>
+    37 - System32 <br>
+    38 - Program files<br>
+                39 - Мои рисунки<br>
+              40 - Documents &amp; Settings\UserName<br>
+    46 - Общие документы </p>
+        </blockquote>
+		<p> также есть возможность задавать любую папку, в этом случае XP Tweaker
+            использует значение типа <strong>STRING</strong>.</p>
+		<p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+  <table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui"><a name="cbStandardPlaces"></a>Изменить диалоговое окно в Microsoft Office 2000/XP/2003</td>
+    </tr>
+    <tr>
+      <td height="210" class="nogui"><blockquote>
+          <p>Изменение кнопок быстрого доступа к файлам в офисных приложениях.</p>
+          <p class="myg">HKCU\Software\Microsoft\Office\10.0\Common\Open Find\Places\UserDefinedPlaces</p>
+          <p>Для добавления новой кнопки, необходимо в данном ключе, создать подключ, например:<br>
+          <span class="myg">          HKCU\Software\Microsoft\Office\10.0\Common\Open Find\Places\UserDefinedPlaces\1</span></p>
+          <p><strong>STRING</strong> <span class="myb">Name</span>, задает имя создаваемой кнопки <br>
+              <strong>STRING</strong> <span class="myb">Path</span>, задает путь, например:</p>
+          <p>Name = Мои документы<br>
+            Path = C:\Documents and Settings\dmc\Мои документы</p>
+          <p>После создания своих кнопок, необходимо запретить вывод на экран стандартных кнопок, для этого необходимо в каждом подключе <span class="myg">HKCU\Software\Microsoft\Office\10.0\Common\Open Find\Places\StandardPlaces</span> создать значение:</p>
+          <p><strong>DWORD</strong> <span class="myb">Show</span> равное 0 </p>
+          <p>Примечание: для <strong>Microsoft Office 2003</strong> используется 11.0, вместо 10.0</p>
+          <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

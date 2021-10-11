@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>Меню Пуск</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Защита меню Пуск и Панели задач</h1></td>
+    </tr>
+</table>
+
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>&nbsp;</p>
+        <p><strong>Меню Пуск</strong></p>
+        <p><a href="#lb1">Сделать недоступными свойства Панели задач и меню Пуск
+        *</a></p>
+        <p><a href="#lb2">Запретить модификацию меню Пуск</a></p>
+        <p><a href="#lb3">Запретить переключать меню в стиль XP *</a></p>
+        <p><a href="#lb4">Запретить пункт меню Поиск *</a></p>
+		<p><a href="#lb5">Запретить пункт меню Выполнить *</a></p>
+		<p><a href="#lb6">Запретить пункт меню Справка и поддержка *</a></p>
+		<p><a href="#lb7">Запретить пункт меню Все программы (Стиль ХР) *</a></p>
+		<p><a href="#lb8">Запретить пункт меню Недавние документы *</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Настройка меню классического типа</strong></p>
+		<p><a href="#lb9">Запретить пункты меню Настройка</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Панель задач</strong></p>
+		<p><a href="#lb10">Запретить контекстное меню Панели задач</a></p>
+		<p>&nbsp;</p>
+      </blockquote></td>
+    </tr>
+</table>
+  
+<h2>Меню Пуск</h2>
+
+<a name="lb1"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Сделать недоступными свойства Панели задач и меню Пуск
+        *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает изменение и настройку Панели задач. Требуется перезагрузка.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoSetTaskbar</span>, значение
+          1 - свойства Панели задачи меню Пуск не доступны</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb2"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить модификацию меню Пуск</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает добавление и удаление новых пунктов в меню Пуск.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoChangeStartMenu</span>,
+          значение 1 - запрещает модификацию меню Пуск</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb3"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить переключать меню в стиль XP *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Прежде чем применить опцию, необходимо переключиться на классический
+          вид меню. Требуется перезагрузка.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoSimpleStartMenu</span>,
+          значение 1 - запрещает переключать меню Пуск в стиль XP</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb4"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить пункт меню Поиск *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Требуется перезагрузка.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoFind</span>, значение 1
+          - убирает пункт меню Поиск</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb5"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить пункт меню Выполнить *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Требуется перезагрузка.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoRun</span>, значение 1
+          - убирает пункт меню Выполнить</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb6"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить пункт меню Справка и поддержка *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запретить доступ к справочной информации, обновлении, восстановлению
+          системы и т.д. Требуется перезагрузка.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoSMHelp</span>, значение
+          1 - убирает пункт меню Справка и поддержка</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb7"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить пункт меню Все программы (Стиль ХР) *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Убирает подменю Все программы из меню Пуск. Требуется перезагрузка.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoStartMenuMorePrograms</span>,
+          значение 1 - убирает подменю Все программы</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="lb8"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить пункт меню Недавние документы *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoRecentDocsMenu</span>,
+          значение 1 - убирает пункт меню Недавние документы</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Настройка меню классического типа</h2>
+
+<a name="lb9"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить пункты меню Настройка</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Данная настройка относится к меню классического вида и не влияет на
+          вид меню в стиле XP . Данная опция убирает пункты &quot;Панель управления&quot;, &quot;Сетевые
+          подключения&quot;, &quot;Принтеры и факсы&quot; из меню Настройка.
+          Возможность настроить меню Пуск остается.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoSetFolders</span>, значение
+          1 - запрещает пункты меню настройка.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<h2>Панель задач</h2>
+
+<a name="lb10"></a>  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Запретить контекстное меню Панели задач</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Запрещает контекстное меню Панели задач (контекстное меню программ,
+          значки которых находятся в системном трее - доступно)</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD </strong><span class="myb">NoTrayContextMenu</span>,
+          значение 1 - запрещает контекстное меню.</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

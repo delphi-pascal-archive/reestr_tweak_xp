@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Панель задач</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Панель задач</h1></td>
+    </tr>
+</table>
+	
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Содержание</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>&nbsp;</p>
+        <p><strong>Панель задач</strong></p>
+        <p><a href="#cbEnableBalloonTips">Показывать всплывающие подсказки *</a></p>
+        <p><a href="#cbEnableAutoTray">Автоматически скрывать иконки в трее</a></p>
+		<p><a href="#cbNoTrayItemsDisplay">Cкрыть все значки в трее</a></p>
+		<p><a href="#cbTaskbarGlomming">Группировать сходные кнопки на панели задач</a></p>
+		<p>&nbsp;</p>
+		<p><strong>Мигание кнопок на панели задач</strong></p>
+		<p><a href="#udForegroundLockTimeout">Мигание кнопок на панели задач</a></p>
+		<p><a href="#udForegroundFlashCount">Число миганий кнопки на панели задач</a></p>
+		<p>&nbsp;</p>
+      </blockquote></td>
+    </tr>
+</table>
+  
+<a name="cbEnableBalloonTips"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Показывать всплывающие подсказки *</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>В Windows XP на панели задач существует два типа всплывающих
+              подсказок - краткие и с дополнительными сведениями. В краткой показывается
+              только название программы, а в &quot;полной версии&quot; некоторые
+              дополнительные сведенья, их содержимое зависит от программы. Пример:
+              при включенной опции монитор DrWeb'a (SpIDer Guard) показывает статистику
+              проверок фалов, а при выключенной опции только название программы.
+              Иногда &quot;полные версии&quot; всплывающих подсказок выводятся
+              самостоятельно, без наведения мыши, чтобы сообщить пользователю,
+              о каком либо событии.
+              Значение отсутствует при установке Windows.</p>
+        <p>Примечание: Данная опция никак не влияет на всплывающую подсказку
+              к кнопке Пуск.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p><strong>DWORD</strong> <span class="myb">EnableBalloonTips</span>,
+              значение 1 (или удаление параметра) - показывать дополнительные сведенья,
+              0 - не показывать</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbEnableAutoTray"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Автоматически скрывать иконки в трее</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>Очень удобная опция, если у вас постоянно находится
+              много иконок программ в системном трее. Также эту опцию можно настроить,
+              щелкнув правой кнопкой мыши на панели задач и выбрав в контекстном
+              меню пункт Свойства. При установке Windows, параметр отсутствует.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer</p>
+        <p> <strong>DWORD</strong> <span class="myb">EnableAutoTray</span>, значение
+              1 (или удаление параметра) - скрывать иконки, 0 - все иконки отображаются</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbNoTrayItemsDisplay"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Cкрыть все значки в трее</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>Убирает значки всех приложений в системном трее.
+              Если опция включена, то в свойствах &quot;Панели задач и меню Пуск&quot; раздел &quot;Область
+              уведомлений&quot; будет недоступен.</p>
+        <p class="myg"> HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</p>
+        <p><strong>DWORD</strong> <span class="myb">NoTrayItemsDisplay</span>,
+              значение 1 - скрыть все значки</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="cbTaskbarGlomming"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Группировать сходные кнопки на панели задач</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>Признак группировки окон одинакового типа в одну кнопку. В дальнейшем
+          при щелчке на эту кнопку появится меню, в котором можно выбрать программу.
+          Также эту опцию можно настроить, щелкнув правой кнопкой мыши на панели
+          задач и выбрав в контекстном меню пункт Свойства. Значение отсутствует
+          при установке Windows.</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p> <strong>DWORD</strong> <span class="myb">TaskbarGlomming</span>,
+          значение 1 (или удаление значения) - группировать окна, 0 - не группировать</p>
+        <p>Следующий параметр влияет на порядок группировки приложений:</p>
+        <p class="myg">HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+        <p> <strong>DWORD</strong> <span class="myb">TaskbarGroupSize</span>,
+          может принимать следующие значения:</p>
+          <ul>
+            <ul>
+              <li>0 - группировать окна, начиная со &quot;старых&quot; окон,
+                когда на панели задач мало места</li>
+              <li> 1 - группировать окна, начиная с &quot;новых&quot; окон, когда
+                на панели задач мало места</li>
+              <li> 2 - группировать в любом случае, если есть не менее двух подобных
+                окон</li>
+              <li> 3 - группировать в любом случае, если есть не менее трех подобных
+                окон и т.д.</li>
+            </ul>
+          </ul>
+          <p>Примечание: значение 0 используется по умолчанию.</p>
+          <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+        </td>
+    </tr>
+</table>
+
+<h2>Мигание кнопок на панели задач</h2>
+
+<a name="udForegroundLockTimeout"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">В этом разделе XP Tweaker позволяет изменить следующие
+        параметры:</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p>Когда программа требует ввода данных, она может либо &quot;выскочить&quot; наверх,
+          либо начать мигать иконкой в панели задач. Данный параметр регулирует
+          время задержки до &quot;перехвата&quot; фокуса в миллисекундах.</p>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong>DWORD</strong> <span class="myb">ForegroundLockTimeout</span>,
+          значение 0 - немедленно, по умолчанию Windows XP использует 200 секунд
+          (200000 миллисекунд)</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote></td>
+    </tr>
+</table>
+
+<a name="udForegroundFlashCount"></a>
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Число миганий кнопки на панели задач</td>
+    </tr>
+    <tr>
+      <td  class="nogui"><blockquote>
+        <p class="myg">HKCU\Control Panel\Desktop</p>
+        <p><strong> DWORD</strong> <span class="myb">ForegroundFlashCount</span>,
+              значение 0 - заставит мигать кнопку бесконечно, по умолчанию Windows
+              XP использует значение 3</p>
+        <p align="right"><a href="#Top">Наверх</a></p>
+      </blockquote>
+      </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>

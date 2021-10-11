@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Раздел Uninstall</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="XP Tweaker, Russian Edition, настройка, оптимизация, реестр, Windows XP, программа, free, бесплатно, registry, download">
+<meta name="description" content="XP Tweaker Russian Edition - это программа по настройке и оптимизации Windows XP.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tableblue"><h1 align="center">XP Tweaker - Информация об установленных программах</h1></td>
+    </tr>
+</table>
+	  
+<table width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="gui">Список установленных программ</td>
+    </tr>
+    <tr>
+      <td class="nogui"><blockquote>
+        <p>Вся информация для удаления программы храниться в следующем разделе
+          реестра:</p>
+        <p class="myg">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</p>
+        <p>Информация о каждой программе храниться в отдельном разделе. В каждом
+          разделе обязательно должны присутствовать два параметра:</p>
+        <p><strong>STRING</strong> <span class="myb">DisplayName</span>, значение
+          - имя, которое отображается в списке удаляемых программ</p>
+        <p><strong>STRING</strong> <span class="myb">UninstallString</span>,
+          значение - путь к программе удаления</p>
+        <p>также могут присутствовать другие пункты, их обычно добавляют современные
+          инсталляторы:</p>
+        <p><strong>STRING</strong> <span class="myb">DisplayIcon</span> - иконка,
+          соответствующая приложению в диалоге &quot;Установка и удаление программ&quot; <br>
+      <strong>STRING</strong> <span class="myb">ModifyPath</span> - Путь инсталлятора
+      для изменения установочных параметров программы. Еcли этот ключ установлен,
+      то Кнопка &quot;Заменить/Удалить&quot; распадается на две - &quot;Заменить&quot; (выполняется
+      ModifyPath) и &quot;Удалить&quot; (выполняется UninstallString) </p>
+        <p>Следующие параметры относятся к диалоговому окну Поддержка</p>
+        <p><strong>STRING</strong> <span class="myb">Publisher</span> - Издатель
+          продукта <br>
+            <strong>STRING</strong> <span class="myb">Readme</span> - Путь к
+            файлу Readme для данного продукта <br>
+            <strong>STRING</strong> <span class="myb">Comments</span> - Комментарии
+            к продукту <br>
+      <strong>STRING</strong> <span class="myb">Contact</span> - Контактное лицо
+      (e-mail и т.п.) <br>
+      <strong>STRING</strong> <span class="myb">DisplayVersion</span> - Номер
+      версии <br>
+      <strong>STRING</strong> <span class="myb">ProductID</span> - Код продукта <br>
+      <strong>STRING</strong> <span class="myb">RegCompany</span> - Зарегистрированная
+      компания <br>
+      <strong>STRING</strong> <span class="myb">RegOwner</span> - Зарегистрированный
+      владелец <br>
+      <strong>STRING</strong> <span class="myb">URLInfoAbout</span> - Домашняя
+      страничка производителя (параметр Publisher становится ссылкой) <br>
+      <strong>STRING</strong> <span class="myb">URLUpdateInfo</span> - URL обновления
+      продукта <br>
+      <strong>STRING</strong> <span class="myb">HelpLink</span> - URL сведений
+      о поддержке</p>
+        <p>&nbsp;</p>
+        <p>Кнопка <strong>Изменить</strong> позволяет изменить строку, которая
+          используется для удаления программы.</p>
+        <p>Кнопка <strong>Удалить из реестра</strong>, удаляет информацию о программе
+          из раздела Uninstall. Это может понадобиться, если Вы удалили программу,
+          не используя специальную программу для удаления. Windows XP иногда
+          сама может удалить эту информацию (предварительно спросив Вас об этом),
+          но далеко не всегда.</p>
+        <p>Кнопка <strong>Uninstall</strong> удаляет выделенную в списке программу.</p>
+        <p>Кнопка <strong>Обновить</strong>, обновляет список установленных программ,
+          она может понадобиться после удаления программы, используя кнопку Uninstall</p>
+      </blockquote></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&copy; 2002-2004 dmc</p>
+</center>
+</body>
+</html>
